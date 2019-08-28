@@ -1,0 +1,81 @@
+{
+  "name": "re-krass-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect",
+    "unit": "jest"
+  },
+  "dependencies": {
+    "@snyk/cli-interface": "^2.0.3",
+    "axios": "^0.18.1",
+    "babel-loader": "^8.0.6",
+    "cache-loader": "^4.1.0",
+    "core-js": "^2.6.5",
+    "data-store": "^3.1.0",
+    "eslint-loader": "^2.2.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "snyk": "^1.204.0",
+    "store": "^2.0.12",
+    "thread-loader": "^2.1.2",
+    "tslib": "^1.10.0",
+    "vue": "^2.6.10",
+    "vue-highlightjs": "^1.3.3",
+    "vue-router": "^3.0.3",
+    "vue-router-sitemap": "0.0.4",
+    "vue-style-loader": "^4.1.2",
+    "vuese": "^1.4.7",
+    "vuetify": "^1.5.13"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@vue/babel-preset-app": "^3.9.2",
+    "@vue/cli-plugin-babel": "^3.6.0",
+    "@vue/cli-plugin-eslint": "^3.6.0",
+    "@vue/cli-service": "^3.6.0",
+    "@vue/eslint-config-prettier": "^4.0.1",
+    "@vue/test-utils": "^1.0.0-beta.29",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.8.0",
+    "css-loader": "^3.1.0",
+    "docsify-cli": "^4.3.0",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-jest": "^22.14.1",
+    "eslint-plugin-vue": "^5.0.0",
+    "husky": "^3.0.2",
+    "jest": "^24.8.0",
+    "jest-serializer-vue": "^2.0.2",
+    "jest-transform-stub": "^2.0.0",
+    "lint-staged": "^8.1.5",
+    "marked": "^0.7.0",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^1.18.2",
+    "sass": "^1.18.0",
+    "sass-loader": "^7.1.0",
+    "vue-jest": "^3.0.4",
+    "vue-loader": "^15.7.1",
+    "vue-template-compiler": "^2.5.21",
+    "webpack": "^4.39.1"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.vue$": "vue-jest"
+    }
+  },
+  "snyk": true
+}
