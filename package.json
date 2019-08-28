@@ -6,12 +6,11 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect",
     "unit": "jest"
   },
   "dependencies": {
     "@snyk/cli-interface": "^2.0.3",
+    "@vue/cli-shared-utils": "^3.11.0",
     "axios": "^0.18.1",
     "babel-loader": "^8.0.6",
     "cache-loader": "^4.1.0",
@@ -19,7 +18,9 @@
     "data-store": "^3.1.0",
     "eslint-loader": "^2.2.1",
     "eslint-plugin-prettier": "^3.1.0",
-    "snyk": "^1.204.0",
+    "lru-cache": "^5.1.1",
+    "node-ipc": "^9.1.1",
+    "semver": "^6.3.0",
     "store": "^2.0.12",
     "thread-loader": "^2.1.2",
     "tslib": "^1.10.0",
@@ -29,7 +30,8 @@
     "vue-router-sitemap": "0.0.4",
     "vue-style-loader": "^4.1.2",
     "vuese": "^1.4.7",
-    "vuetify": "^1.5.13"
+    "vuetify": "^1.5.13",
+    "yallist": "^3.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
