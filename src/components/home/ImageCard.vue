@@ -1,22 +1,13 @@
-<template>
-    <v-card id="image-cards" color="accent">
-        <v-img
-            :src="imageSrc"
-            width="200px"
-            height="200px"
-            :alt="titleName + ' profile picture'"
-        ></v-img>
-        <v-card-title id="v-card-title" primary-title>
-            <div>
-                <h3 class="headline mb-0">
-                    {{ titleName }}
-                    <a :href="linkHref" target="_blank">
-                        <v-icon id="user-link">link</v-icon>
-                    </a>
-                </h3>
-            </div>
-        </v-card-title>
-    </v-card>
+<template lang="pug">
+v-card#image-cards(color="accent")
+	v-img(:src="imageSrc" width="200px" height="200px" :alt="titleName + ' profile picture'")
+	v-card-title#v-card-title(primary-title)
+		div
+			h3.headline.mb-0
+				| {{ titleName }}
+				a(:href="linkHref" target="_blank")
+					v-icon#user-link link
+
 </template>
 
 <script>

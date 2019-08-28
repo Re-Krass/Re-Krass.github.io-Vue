@@ -1,57 +1,36 @@
-<template>
-    <v-app id="app" dark>
-        <v-content id="v-content">
-            <v-card id="window" color="primary" class="shake-animation">
-                <div id="nav">
-                    <v-toolbar flat color="success">
-                        <v-toolbar-title class="font-weight-bold">
-                            $: {{ headerTextCurrent }}
-                            <transition name="cursor-fade">
-                                <span v-if="typingText">_</span>
-                            </transition>
-                        </v-toolbar-title>
-                        <v-spacer></v-spacer>
-                        <v-toolbar-items class="hidden-sm-and-down">
-                            <v-btn flat to="/">Home</v-btn>
-                            <!-- <v-btn flat to="/newsite">Newsite</v-btn> -->
-                        </v-toolbar-items>
-                        <v-menu
-                            id="burger-menu"
-                            left
-                            nudge-bottom="5"
-                            offset-y
-                            transition="slide-y-transition"
-                        >
-                            <template v-slot:activator="{ on }">
-                                <v-btn dark icon class="hidden-md-and-up" v-on="on">
-                                    <v-icon>menu</v-icon>
-                                </v-btn>
-                            </template>
-                            <v-list id="burger-menu-list">
-                                <v-list-tile>
-                                    <v-btn flat to="/">Home</v-btn>
-                                </v-list-tile>
-                                <!-- <v-list-tile>
-                                    <v-btn flat to="/newsite">Newsite</v-btn> -->
-                                <!-- </v-list-tile> -->
-                            </v-list>
-                        </v-menu>
-                        <v-btn flat icon color="error" @click="shakeAnimationF">
-                            <v-icon>close</v-icon>
-                        </v-btn>
-                    </v-toolbar>
-                </div>
-                <router-view />
-                <v-footer height="23" class="pa-2 caption">
-                    <v-spacer></v-spacer>
-                    <div>
-                        last updated: {{ lastModified }} &copy;
-                        {{ new Date().getFullYear() }}
-                    </div>
-                </v-footer>
-            </v-card>
-        </v-content>
-    </v-app>
+<template lang="pug">
+v-app#app(dark)
+	v-content#v-content
+		v-card#window.shake-animation(color="primary")
+			#nav
+				v-toolbar(flat color="success")
+					v-toolbar-title.font-weight-bold
+						| $: {{ headerTextCurrent }}
+						transition(name="cursor-fade")
+							span(v-if="typingText") _
+					v-spacer
+					v-toolbar-items.hidden-sm-and-down
+						v-btn(flat to="/") Home
+						// <v-btn flat to="/newsite">Newsite</v-btn>
+					v-menu#burger-menu(left nudge-bottom="5" offset-y transition="slide-y-transition")
+						template(v-slot:activator="{ on }")
+							v-btn.hidden-md-and-up(dark icon v-on="on")
+								v-icon menu
+						v-list#burger-menu-list
+							v-list-tile
+								v-btn(flat to="/") Home
+							//
+								<v-list-tile>
+								<v-btn flat to="/newsite">Newsite</v-btn>
+							// </v-list-tile>
+					v-btn(flat icon color="error" @click="shakeAnimationF")
+						v-icon close
+			router-view
+				v-footer.pa-2.caption(height="23")
+					v-spacer
+					div
+						| last updated: {{ lastModified }} ©
+						| {{ new Date().getFullYear() }}
 </template>
 
 <script>

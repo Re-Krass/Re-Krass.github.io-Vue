@@ -1,5 +1,5 @@
-<template>
-    <div>title</div>
+<template lang="pug">
+    div title
 </template>
 
 <script>

@@ -1,25 +1,18 @@
-<template>
-    <v-card id="theme-card" color="accent" height="100%" tile>
-        <v-card-title primary-title>
-            <div>
-                <h3 id="theme-card-headline" class="headline mb-0">{{ headline }}</h3>
-                <div class="mt-4">{{ content }}</div>
-            </div>
-        </v-card-title>
-        <v-card-actions id="v-card-actions">
-            <v-tooltip v-if="showTooltip" bottom color="#424242">
-                <template v-slot:activator="{ on }">
-                    <v-btn block raised color="success" :href="link" target="_blank" v-on="on">{{
-                        buttonText
-                    }}</v-btn>
-                </template>
-                <span>coming soon™</span>
-            </v-tooltip>
-            <v-btn v-else block raised color="success" :href="link" target="_blank">{{
-                buttonText
-            }}</v-btn>
-        </v-card-actions>
-    </v-card>
+<template lang="pug">
+v-card#theme-card(color="accent" height="100%" tile)
+	v-card-title(primary-title)
+		div
+			h3#theme-card-headline.headline.mb-0 {{ headline }}
+			.mt-4 {{ content }}
+	v-card-actions#v-card-actions
+		v-tooltip(v-if="showTooltip" bottom color="#424242")
+			template(v-slot:activator="{ on }")
+				v-btn(block raised color="success" :href="link" target="_blank" v-on="on")
+					| {{
+					| buttonText
+					| }}
+			span coming soon™
+		v-btn(v-else block raised color="success" :href="link" target="_blank") {{buttonText}}
 </template>
 
 <script>
