@@ -9,18 +9,14 @@
     "unit": "jest"
   },
   "dependencies": {
-    "@snyk/cli-interface": "^2.0.3",
-    "@vue/cli-shared-utils": "^3.11.0",
     "axios": "^0.18.1",
+    "babel-core": "^7.0.0-0",
     "babel-loader": "^8.0.6",
     "cache-loader": "^4.1.0",
     "core-js": "^2.6.5",
     "data-store": "^3.1.0",
     "eslint-loader": "^2.2.1",
     "eslint-plugin-prettier": "^3.1.0",
-    "lru-cache": "^5.1.1",
-    "node-ipc": "^9.1.1",
-    "semver": "^6.3.0",
     "store": "^2.0.12",
     "thread-loader": "^2.1.2",
     "tslib": "^1.10.0",
@@ -30,8 +26,7 @@
     "vue-router-sitemap": "0.0.4",
     "vue-style-loader": "^4.1.2",
     "vuese": "^1.4.7",
-    "vuetify": "^1.5.13",
-    "yallist": "^3.0.3"
+    "vuetify": "^1.5.13"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -47,7 +42,7 @@
     "docsify-cli": "^4.3.0",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-jest": "^22.14.1",
+    "eslint-plugin-pug": "^1.1.1",
     "eslint-plugin-vue": "^5.0.0",
     "husky": "^3.0.2",
     "jest": "^24.8.0",
@@ -57,6 +52,8 @@
     "marked": "^0.7.0",
     "postcss-loader": "^3.0.0",
     "prettier": "^1.18.2",
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0",
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
     "vue-jest": "^3.0.4",
@@ -78,6 +75,5 @@
       "^.+\\.js$": "babel-jest",
       "^.+\\.vue$": "vue-jest"
     }
-  },
-  "snyk": true
+  }
 }
