@@ -1,7 +1,7 @@
 <p align="center">
   <img alt="YDL Logo" src="/images/Re-Krass_logo_256px.png" width="256">
 </p>
-<h1 align="center">Re-Krass Homepage - Vue files</h1>
+<h1 align="center">Re-Krass Homepage</h1>
 <p align="center">
   <!-- Website up status -->
   <a target="_blank" href="https://stats.uptimerobot.com/gkNylh6Jg">
@@ -26,7 +26,4 @@
 
 Visit:
 <a target="_blank" href="https://Re-Krass.github.io/">Homepage
-  </a>
-
-<a target="_blank" href="https://Re-Krass.github.io/Re-Krass.github.io-Vue/">Documentation
   </a>
