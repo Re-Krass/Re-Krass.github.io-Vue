@@ -1,21 +1,21 @@
 <template lang="pug">
 .home
-	v-container(grid-list-md="" fluid="")
+	v-container(grid-list-md fluid)
 		// Section 1 - Informations
 		v-layout
-			v-flex(xs12="")
+			v-flex(xs12)
 				Section(icon="info" title="Informations")
 					.text-container
 						| On this site you can discover my University projects and personal
 						| projects.
 		// Section 1.2 - Certificates
 		v-layout
-			v-flex(xs12="")
+			v-flex(xs12)
 				Section(icon="attach_file" title="Certificates")
 					.text-container
-						v-layout(row="" wrap="")
-							v-flex(xs12="" md7="")
-								v-tooltip(bottom="")
+						v-layout(row wrap)
+							v-flex(xs12 md7)
+								v-tooltip(bottom)
 									template(v-slot:activator="{ on: tooltip }")
 										a(href="https://skillshub.isqi.org/jpp8kloi" target="_blank" v-on="{ ...tooltip }")
 											v-img(alt="Certificate image" src="https://images.credential.net/embed/jpp8kloi.png" width="100%")
@@ -24,8 +24,8 @@
 										|  Visit my
 										i Skillshub
 										|  page
-							v-flex(xs12="" md5="")
-								v-tooltip(bottom="")
+							v-flex(xs12 md5)
+								v-tooltip(bottom)
 									template(v-slot:activator="{ on: tooltip }")
 										a(href="https://skillshub.isqi.org/jpp8kloi" target="_blank" v-on="{ ...tooltip }")
 											v-img(alt="Certificate logo" src="https://s3.amazonaws.com/accredible-api-badge/1560852655189240.png" width="100%")
@@ -66,38 +66,38 @@
 										| Successful Candidate Register
 		// Section 2 - Personal projects
 		v-layout
-			v-flex(xs12="")
+			v-flex(xs12)
 				Section(icon="code" title="Personal projects")
-					v-layout#text-cards-container(wrap="")
+					v-layout#text-cards-container(wrap)
 						// Card
-						v-flex#text-card(xs12="" sm6="" md4="")
+						v-flex#text-card(xs12 sm6 md4)
 							ThemeCard(headline="Dark Theme for TUB sites" content="Dark theme for ISIS-TUB and MOSES-TUB site." link="https://github.com/dark-theme-styles/Dark-Theme-TUB" button-text="Go to project")
 						// Card
-						v-flex#text-card(xs12="" sm6="" md4="")
+						v-flex#text-card(xs12 sm6 md4)
 							ThemeCard(headline="Y&D Learning Website V2" content="Website for Y&D Learning." link="https://ydlearning.github.io/ydl-v2-front/" button-text="Visit page")
 						// Card
-						v-flex#text-card(xs12="" sm6="" md4="")
+						v-flex#text-card(xs12 sm6 md4)
 							ThemeCard(headline="Y&D Learning V2 Frontend" content="Frontend for Y&D Learning V2 made in Vue + Vuetify." link="https://github.com/ydlearning/ydl-v2-front" button-text="Go to project")
 						// Card
-						v-flex#text-card(xs12="" sm6="" md4="")
+						v-flex#text-card(xs12 sm6 md4)
 							ThemeCard(headline="Y&D Learning V2 Backend / API" content="Backend for Y&D Learning V2 made in Django REST framework. " link="https://github.com/ydlearning/ydl-v2-api" button-text="Go to project")
 		// Section 3 - Uni projects
 		v-layout
-			v-flex(xs12="")
+			v-flex(xs12)
 				Section(icon="code" title="University projects")
-					v-layout#text-cards-container(wrap="")
+					v-layout#text-cards-container(wrap)
 						// Card
-						v-flex#text-card(xs12="" sm6="" md4="")
+						v-flex#text-card(xs12 sm6 md4)
 							ThemeCard(headline="Y&D Learning Website V1" content="Website for Y&D Learning." link="https://younganddigitallearning.github.io/ydl-front/" button-text="Visit page")
 						// Card
-						v-flex#text-card(xs12="" sm6="" md4="")
+						v-flex#text-card(xs12 sm6 md4)
 							ThemeCard(headline="Y&D Learning V1 Frontend" content="Frontend for Y&D Learning V2 made in Vue." link="https://github.com/YoungAndDigitalLearning/ydl-front" button-text="Go to project")
 						// Card
-						v-flex#text-card(xs12="" sm6="" md4="")
+						v-flex#text-card(xs12 sm6 md4)
 							ThemeCard(headline="Y&D Learning V1 Backend / API" content="Backend for Y&D Learning V2 made in Django REST framework. " link="https://github.com/YoungAndDigitalLearning/ydl-api" button-text="Go to project")
 		// Section 4 - Links
 		v-layout
-			v-flex(xs12="")
+			v-flex(xs12)
 				Section(icon="link" title="Links")
 					.text-container
 						ul
@@ -117,12 +117,12 @@
 									a(href="https://codepen.io/Re-Krass" target="_blank") visit Homepage
 		// Section 5 - Author
 		v-layout
-			v-flex(xs12="")
+			v-flex(xs12)
 				Section(icon="code" title="Author")
 					.window__content
-						v-layout#users-card(wrap="" justify-content-center="")
-							v-layout(justify-content-center="")
-								v-flex(xs12="" offset-xs2="" sm12="" offset-sm4="" offset-md5="")
+						v-layout#users-card(wrap justify-content-center)
+							v-layout(justify-content-center)
+								v-flex(xs12 offset-xs2 sm12 offset-sm4 offset-md5)
 									ImageCard(image-src="https://avatars1.githubusercontent.com/u/38668040" title-name="Re-Krass" link-href="https://github.com/Re-Krass")
 
 </template>
