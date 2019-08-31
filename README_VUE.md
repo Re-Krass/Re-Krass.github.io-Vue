@@ -48,3 +48,28 @@ docsify serve ..\docs\
 Preview server [Server](http://localhost:3000)
 
 See [Docsify](https://docsify.js.org/#/quickstart) documentation.
+
+
+## Vue
+```bash
+# install global
+pnpm install -g vue
+```
+
+## Vue Cli
+```bash
+# install global
+pnpm install -g @vue/cli
+
+# Vue Cli Service
+pnpm install -g @vue/cli-service
+
+# Vue Cli Babel
+pnpm install -g @vue/cli-plugin-babel
+
+# Vue Cli Eslint
+pnpm install -g @vue/cli-plugin-eslint
+```
+
+See [Vue-Clie](https://cli.vuejs.org/guide/installation.html) instructions.
+
