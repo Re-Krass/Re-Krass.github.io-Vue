@@ -68,5 +68,5 @@ Vue project for Homepage, made in Vue + Vuetify.
 - <a target="_blank" href="https://Re-Krass.github.io/">Homepage
   </a>
 
-- <a target="_blank" href="https://Re-Krass.github.io/Re-Krass.github.io-Vue/">Documentation
+- <a target="_blank" href="https://re-krass.github.io/Re-Krass.github.io-Vue/#/Readme">Documentation
   </a>
