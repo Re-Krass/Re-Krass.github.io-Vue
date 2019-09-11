@@ -129,3 +129,6 @@ yarn-error.log*
 ### Own ###
 documentation/*
 !documentation/Readme.md
+
+# Own
+website-build/
