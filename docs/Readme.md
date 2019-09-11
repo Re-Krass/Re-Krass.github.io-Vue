@@ -54,7 +54,7 @@ Visit:
 
 - <a target="_blank" href="https://Re-Krass.github.io/">Homepage
   </a>
-- <a target="_blank" href="https://github.com/Re-Krass/Re-Krass.github.io/wiki">Wiki
+- <a target="_blank" href="https://github.com/Re-Krass/Re-Krass.github.io-Vue/wiki">Wiki
   </a>
 - <a target="_blank" href="https://github.com/Re-Krass/Re-Krass.github.io/">GitHub Repo
   </a>
