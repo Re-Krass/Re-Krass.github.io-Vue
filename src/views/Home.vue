@@ -71,30 +71,72 @@
 					v-layout#text-cards-container(wrap)
 						// Card
 						v-flex#text-card(xs12 sm6 md4)
-							ThemeCard(headline="Dark Theme for TUB sites" content="Dark theme for ISIS-TUB and MOSES-TUB site." link="https://github.com/dark-theme-styles/Dark-Theme-TUB" button-text="Go to project")
+							ThemeCard(
+								headline="Dark Theme for TUB sites" 
+								content="Dark theme for ISIS-TUB and MOSES-TUB site." 
+								link="https://github.com/dark-theme-styles/Dark-Theme-TUB" 
+								button-text="Go to project")
 						// Card
 						v-flex#text-card(xs12 sm6 md4)
-							ThemeCard(headline="Y&D Learning Website V2" content="Website for Y&D Learning." link="https://ydlearning.github.io/ydl-v2-front/" button-text="Visit page")
+							ThemeCard(
+								headline="Y&D Learning Website V2" 
+								content="Website for Y&D Learning." 
+								link="https://ydlearning.github.io/ydl-v2-front/" 
+								button-text="Visit page")
 						// Card
 						v-flex#text-card(xs12 sm6 md4)
-							ThemeCard(headline="Y&D Learning V2 Frontend" content="Frontend for Y&D Learning V2 made in Vue + Vuetify." link="https://github.com/ydlearning/ydl-v2-front" button-text="Go to project")
+							ThemeCard(
+								headline="Y&D Learning V2 Frontend" 
+								content="Frontend for Y&D Learning V2 made in Vue + Vuetify." 
+								link="https://github.com/ydlearning/ydl-v2-front" button-text="Go to project")
 						// Card
 						v-flex#text-card(xs12 sm6 md4)
-							ThemeCard(headline="Y&D Learning V2 Backend / API" content="Backend for Y&D Learning V2 made in Django REST framework. " link="https://github.com/ydlearning/ydl-v2-api" button-text="Go to project")
+							ThemeCard(
+								headline="Y&D Learning V2 Backend / API" 
+								content="Backend for Y&D Learning V2 made in Django REST framework. " 
+								link="https://github.com/ydlearning/ydl-v2-api" button-text="Go to project")
+						// Card
+						v-flex#text-card(xs12 sm6 md4)
+							ThemeCard(
+								headline="Re-Krass Homepage" 
+								content="This Homepage made in Vue + Vuetify." 
+								link="https://github.com/Re-Krass/Re-Krass.github.io-Vue" 
+								button-text="Go to project")
 		// Section 3 - Uni projects
 		v-layout
 			v-flex(xs12)
 				Section(icon="code" title="University projects")
 					v-layout#text-cards-container(wrap)
+						h3.pl-3 These projects were completed for the module 'Programming Lab: Social Networking‘ at TU Berlin."
+					v-layout#text-cards-container(wrap)
 						// Card
 						v-flex#text-card(xs12 sm6 md4)
-							ThemeCard(headline="Y&D Learning Website V1" content="Website for Y&D Learning." link="https://younganddigitallearning.github.io/ydl-front/" button-text="Visit page")
+							ThemeCard(
+								headline="Y&D Learning Website V1" 
+								content="Website for Y&D Learning." 
+								link="https://younganddigitallearning.github.io/ydl-front/" 
+								button-text="Visit page")
 						// Card
 						v-flex#text-card(xs12 sm6 md4)
-							ThemeCard(headline="Y&D Learning V1 Frontend" content="Frontend for Y&D Learning V2 made in Vue." link="https://github.com/YoungAndDigitalLearning/ydl-front" button-text="Go to project")
+							ThemeCard(
+								headline="Y&D Learning V1 Frontend" 
+								content="Frontend for Y&D Learning V2 made in Vue." 
+								link="https://github.com/YoungAndDigitalLearning/ydl-front" 
+								button-text="Go to project")
 						// Card
 						v-flex#text-card(xs12 sm6 md4)
-							ThemeCard(headline="Y&D Learning V1 Backend / API" content="Backend for Y&D Learning V2 made in Django REST framework. " link="https://github.com/YoungAndDigitalLearning/ydl-api" button-text="Go to project")
+							ThemeCard(
+								headline="Y&D Learning V1 Backend / API" 
+								content="Backend for Y&D Learning V2 made in Django REST framework. " 
+								link="https://github.com/YoungAndDigitalLearning/ydl-api" 
+								button-text="Go to project")
+						// Card
+						v-flex#text-card(xs12 sm6 md4)
+							ThemeCard(
+								headline="2Do4You" 
+								content="ToDo website made in Django." 
+								link="https://github.com/B4rtware/2do4you" 
+								button-text="Go to project")
 		// Section 4 - Links
 		v-layout
 			v-flex(xs12)
