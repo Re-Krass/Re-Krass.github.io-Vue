@@ -13,8 +13,8 @@
 			v-flex(xs12)
 				Section(icon="attach_file" title="Certificates")
 					.text-container
-						v-layout(row wrap)
-							v-flex(xs12 md7)
+						v-layout(row wrap fill-height align-center)
+							//- v-flex(xs12 md7)
 								v-tooltip(bottom)
 									template(v-slot:activator="{ on: tooltip }")
 										a(href="https://skillshub.isqi.org/jpp8kloi" target="_blank" v-on="{ ...tooltip }")
@@ -24,46 +24,54 @@
 										|  Visit my
 										i Skillshub
 										|  page
-							v-flex(xs12 md5)
+							v-flex(xs12 sm3)
 								v-tooltip(bottom)
 									template(v-slot:activator="{ on: tooltip }")
 										a(href="https://skillshub.isqi.org/jpp8kloi" target="_blank" v-on="{ ...tooltip }")
-											v-img(alt="Certificate logo" src="https://s3.amazonaws.com/accredible-api-badge/1560852655189240.png" width="100%")
+											v-img(
+												alt="Certificate logo" 
+												src="https://s3.amazonaws.com/accredible-api-badge/1560852655189240.png" 
+												width="100%")
+												//- min-width="200px"
+												//- max-width="400px"
 											// src="https://images.credential.net/badge/tiny/jpp8kloi_badge.png"
 									span
 										v-icon(size="15px") link
 										|  Visit my
 										i Skillshub
 										|  page
-						br
-						ul
-							li
-								| Visit my 
-								i
-									b Skillshub page
-								|  to explore my
-								|                                     certificates:
-								p
-									a(href="https://skillshub.isqi.org/profile/renkarra/wallet" target="_blank")
-										| Skillshub Wallet
-							li
-								| Direct link to my
-								i
-									b ISTQB® Certified Tester - Foundation Level
-								|                                     certificate:
-								p
-									a(href="https://skillshub.isqi.org/jpp8kloi" target="_blank") Foundation Level certificate
-							li
-								| Verify my 
-								i
-									b Foundation Level
-								|  certificate in the
-								i
-									b Successful Candidate Register
-								| :
-								p
-									a(href="http://scr.istqb.org/?name=Ren%C3%A9+Karra%C3%9F&number=19-CTFL-161723-01&orderBy=relevancy&orderDirection=&dateStart=2019-07-29&dateEnd=2019-08-04&expiryStart=&expiryEnd=&certificationBody=20&examProvider=3&certificationLevel=1&country=83&resultsPerPage=10" target="_blank")
-										| Successful Candidate Register
+							v-flex(xs12 sm9)
+								ul
+									li
+										| Visit my 
+										i
+											b Skillshub page
+										|  to explore my
+										|                                     certificates:
+										p
+											a(href="https://skillshub.isqi.org/profile/renkarra/wallet" target="_blank")
+												| Skillshub Wallet
+									li
+										| Direct link to my
+										i
+											b ISTQB® Certified Tester - Foundation Level
+										|                                     certificate:
+										p
+											a(href="https://skillshub.isqi.org/jpp8kloi" target="_blank") Foundation Level certificate
+									li
+										| Verify my 
+										i
+											b Foundation Level
+										|  certificate in the
+										i
+											b Successful Candidate Register
+										| :
+										p
+											a(
+												href="http://scr.istqb.org/?name=&number=19-CTFL-161723-01&orderBy=relevancy&orderDirection=&dateStart=2019-07-29&dateEnd=2019-08-04&expiryStart=&expiryEnd=&certificationBody=20&examProvider=3&certificationLevel=1&country=83&resultsPerPage=10" 
+												target="_blank")
+												| Successful Candidate Register
+							
 		// Section 2 - Personal projects
 		v-layout
 			v-flex(xs12)
