@@ -62,7 +62,7 @@
 									b Successful Candidate Register
 								| :
 								p
-									a(href="http://scr.istqb.org/?name=Ren%C3%A9+Karra%C3%9F&number=19-CTFL-161723-01&orderBy=relevancy&orderDirection=&dateStart=&dateEnd=&expiryStart=&expiryEnd=&certificationBody=&examProvider=&certificationLevel=&country=&resultsPerPage=10" target="_blank")
+									a(href="http://scr.istqb.org/?name=Ren%C3%A9+Karra%C3%9F&number=19-CTFL-161723-01&orderBy=relevancy&orderDirection=&dateStart=2019-07-29&dateEnd=2019-08-04&expiryStart=&expiryEnd=&certificationBody=20&examProvider=3&certificationLevel=1&country=83&resultsPerPage=10" target="_blank")
 										| Successful Candidate Register
 		// Section 2 - Personal projects
 		v-layout
