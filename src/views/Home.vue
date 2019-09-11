@@ -14,16 +14,6 @@
 				Section(icon="attach_file" title="Certificates")
 					.text-container
 						v-layout(row wrap fill-height align-center)
-							//- v-flex(xs12 md7)
-								v-tooltip(bottom)
-									template(v-slot:activator="{ on: tooltip }")
-										a(href="https://skillshub.isqi.org/jpp8kloi" target="_blank" v-on="{ ...tooltip }")
-											v-img(alt="Certificate image" src="https://images.credential.net/embed/jpp8kloi.png" width="100%")
-									span
-										v-icon(size="15px") link
-										|  Visit my
-										i Skillshub
-										|  page
 							v-flex(xs12 sm3)
 								v-tooltip(bottom)
 									template(v-slot:activator="{ on: tooltip }")
@@ -32,8 +22,6 @@
 												alt="Certificate logo" 
 												src="https://s3.amazonaws.com/accredible-api-badge/1560852655189240.png" 
 												width="100%")
-												//- min-width="200px"
-												//- max-width="400px"
 											// src="https://images.credential.net/badge/tiny/jpp8kloi_badge.png"
 									span
 										v-icon(size="15px") link
