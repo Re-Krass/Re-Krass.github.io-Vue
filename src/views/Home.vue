@@ -46,21 +46,46 @@
 										|                                     certificate:
 										p
 											a(href="https://skillshub.isqi.org/jpp8kloi" target="_blank") Foundation Level certificate
-									li
-										| Verify my 
-										i
-											b Foundation Level
-										|  certificate in the
-										i
-											b Successful Candidate Register
-										| :
-										p
-											a(
-												href="http://scr.istqb.org/?name=&number=19-CTFL-161723-01&orderBy=relevancy&orderDirection=&dateStart=2019-07-29&dateEnd=2019-08-04&expiryStart=&expiryEnd=&certificationBody=20&examProvider=3&certificationLevel=1&country=83&resultsPerPage=10" 
-												target="_blank")
-												| Successful Candidate Register
 							
-		// Section 2 - Personal projects
+		// Section 2 - About me / Links
+		v-layout
+			v-flex(xs12)
+				Section(icon="link" title="About me")
+					.text-container
+						p Find me on:
+						ul
+							li
+								i
+									b LinkedIn
+								|  for my business profile:
+								p
+									a(href="https://www.linkedin.com/in/rene-karrass/" target="_blank") visit LinkedIn page
+							li
+								i
+									b XING
+								|  for my business profile:
+								p
+									a(href="https://www.xing.com/profile/Rene_Karrass/cv" target="_blank") visit XING page
+							li
+								i
+									b GitHub
+								|  for all my projects:
+								p
+									a(href="https://github.com/Re-Krass" target="_blank") visit GitHub page
+							li
+								i
+									b Skillshub
+								|  for my certificates:
+								p
+									a(href="https://skillshub.isqi.org/profile/renkarra" target="_blank") visit Skillshub
+							li
+								i
+									b Codepen
+								|  for my code snippets:
+								p
+									a(href="https://codepen.io/Re-Krass" target="_blank") visit Codepen
+
+		// Section 3 - Personal projects
 		v-layout
 			v-flex(xs12)
 				Section(icon="code" title="Personal projects")
@@ -98,7 +123,7 @@
 								content="This Homepage made in Vue + Vuetify." 
 								link="https://github.com/Re-Krass/Re-Krass.github.io-Vue" 
 								button-text="Go to project")
-		// Section 3 - Uni projects
+		// Section 4 - Uni projects
 		v-layout
 			v-flex(xs12)
 				Section(icon="code" title="University projects")
@@ -133,27 +158,7 @@
 								content="ToDo website made in Django." 
 								link="https://github.com/B4rtware/2do4you" 
 								button-text="Go to project")
-		// Section 4 - Links
-		v-layout
-			v-flex(xs12)
-				Section(icon="link" title="Links")
-					.text-container
-						ul
-							li
-								| Visit my 
-								i
-									b GitHub
-								|  page for all my projects:
-								p
-									a(href="https://github.com/Re-Krass" target="_blank") visit GitHub page
-							li
-								| Visit 
-								i
-									b Codepen
-								|  page for my code snippets:
-								p
-									a(href="https://codepen.io/Re-Krass" target="_blank") visit Homepage
-		// Section 5 - Author
+		// Section 6 - Author
 		v-layout
 			v-flex(xs12)
 				Section(icon="code" title="Author")
