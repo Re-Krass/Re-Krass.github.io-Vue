@@ -6,8 +6,7 @@ v-card#image-cards(color="accent")
 			h3.headline.mb-0
 				| {{ titleName }}
 				a(:href="linkHref" target="_blank")
-					v-icon#user-link link
-
+					v-icon#user-link.pl-1 link
 </template>
 
 <script>
