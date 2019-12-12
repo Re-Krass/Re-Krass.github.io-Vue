@@ -128,7 +128,7 @@
 			v-flex(xs12)
 				Section(icon="code" title="University projects")
 					v-layout#text-cards-container(wrap)
-						h3.pl-3 These projects were completed for the module 'Programming Lab: Social Networking‘ at TU Berlin."
+						h3.pl-3 These projects were completed for the module ‘Programming Lab: Social Networking‘ at TU Berlin.
 					v-layout#text-cards-container(wrap)
 						// Card
 						v-flex#text-card(xs12 sm6 md4)
