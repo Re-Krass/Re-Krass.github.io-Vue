@@ -9,7 +9,7 @@ v-app#app(dark)
 						transition(name="cursor-fade")
 							span(v-if="typingText") _
 					v-spacer
-					v-toolbar-items.hidden-sm-and-down
+					//- v-toolbar-items.hidden-sm-and-down
 						v-btn(flat to="/") Home
 						// <v-btn flat to="/newsite">Newsite</v-btn>
 					v-menu#burger-menu(left nudge-bottom="5" offset-y transition="slide-y-transition")
@@ -26,7 +26,7 @@ v-app#app(dark)
 					v-btn(flat icon color="error" @click="shakeAnimationF")
 						v-icon close
 			router-view
-			v-footer.pa-2.mt-2.caption.text-center(height="23")
+			v-footer.pa-2.mt-2.caption.text-center.mx-lg-auto(height="23")
 				v-container.pa-0.ma-0(fluid )
 					v-layout(row fill-height align-center )
 						v-flex(xs4 text-xs-left)
@@ -151,13 +151,18 @@ export default {
     },
     methods: {
         shakeAnimationF() {
-            var animation_elements = [document.getElementById("window")];
-            for (let anim_elem of animation_elements) {
-                anim_elem.classList.toggle("shake-animation-active");
-                setTimeout(() => {
-                    anim_elem.classList.remove("shake-animation-active");
-                }, 400);
-            }
+			var actualPath = this.$route.path
+			if (actualPath === "/") {
+				var animation_elements = [document.getElementById("window")];
+				for (let anim_elem of animation_elements) {
+					anim_elem.classList.toggle("shake-animation-active");
+					setTimeout(() => {
+						anim_elem.classList.remove("shake-animation-active");
+					}, 400);
+				}
+			} else {
+				this.$router.push("/")
+			}
         },
         scrollToTop() {
             // window.scrollTo(0, 0);
