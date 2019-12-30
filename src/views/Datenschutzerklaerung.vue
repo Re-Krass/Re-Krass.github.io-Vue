@@ -21,16 +21,24 @@
 						div 
 							ul.index
 								li
-									a.index-link(href="#s1")  Einleitung
+									a.index-link(href="#s1")  
+										v-icon(color="#319ae3").toc-icon dashboard
+										span.tocText Einleitung
 								li 
-									a.index-link(href="#s1-1")  Inhaltsübersicht
+									a.index-link(href="#s1-1")
+										v-icon(color="#319ae3").toc-icon toc
+										span.tocText Inhaltsübersicht
 								li
-									a.index-link(href="#s2")  Verantwortlicher
+									a.index-link(href="#s2")
+										v-icon(color="#319ae3").toc-icon mdi-account-tie-outline
+										span.tocText Verantwortlicher
 									ul
 										li 
-											a.index-link(href="#s2-1")  Verantwortliche Personen
+											a.index-link(href="#s2-1") Verantwortliche Personen
 								li
-									a.index-link(href="#s3")  Übersicht der Verarbeitungen
+									a.index-link(href="#s3")
+										v-icon(color="#319ae3").toc-icon schedule
+										span.tocText Übersicht der Verarbeitungen
 									ul
 										li 
 											a.index-link(href="#s3-1")  Arten der verarbeiteten Daten
@@ -39,63 +47,103 @@
 										li 
 											a.index-link(href="#s3-3")  Zwecke der Verarbeitung
 								li
-									a.index-link(href="#s4")  Maßgebliche Rechtsgrundlagen
+									a.index-link(href="#s4")
+										v-icon(color="#319ae3").toc-icon gavel
+										span.tocText Maßgebliche Rechtsgrundlagen
 								li
-									a.index-link(href="#s5")  Sicherheitsmaßnahmen
+									a.index-link(href="#s5")
+										v-icon(color="#319ae3").toc-icon security
+										span.tocText Sicherheitsmaßnahmen
 								li
-									a.index-link(href="#s6")  Übermittlung und Offenbarung von personenbezogenen Daten
+									a.index-link(href="#s6")
+										v-icon(color="#319ae3").toc-icon sync_alt
+										span.tocText Übermittlung und Offenbarung von personenbezogenen Daten
 								li
-									a.index-link(href="#s7")  Datenverarbeitung in Drittländern
+									a.index-link(href="#s7")
+										v-icon(color="#319ae3").toc-icon schedule
+										span.tocText Datenverarbeitung in Drittländern
 								li
-									a.index-link(href="#s8")  Einsatz von Cookies
+									a.index-link(href="#s8")
+										v-icon(color="#319ae3").toc-icon mdi-cookie
+										span.tocText Einsatz von Cookies
 									ul 
 										li
 											a.index-link(href="#s8-1") Die folgenden Cookie-Typen und Funktionen werden unterschieden
 								li
-									a.index-link(href="#s9")  Registrierung und Anmeldung
+									a.index-link(href="#s9")
+										v-icon(color="#319ae3").toc-icon mdi-login
+										span.tocText Registrierung und Anmeldung
 								li
-									a.index-link(href="#s10")  Blogs und Publikationsmedien
+									a.index-link(href="#s10")
+										v-icon(color="#319ae3").toc-icon mdi-post
+										span.tocText Blogs und Publikationsmedien
 									ul 
 										li
 											a.index-link(href="#s10") Eingesetzte Dienste und Diensteanbieter
 								li
-									a.index-link(href="#s11")  Kontaktaufnahme
+									a.index-link(href="#s11")
+										v-icon(color="#319ae3").toc-icon mdi-contact-mail
+										span.tocText Kontaktaufnahme
 								li
-									a.index-link(href="#s12")  Bereitstellung des Onlineangebotes und Webhosting
+									a.index-link(href="#s12")
+										v-icon(color="#319ae3").toc-icon mdi-server
+										span.tocText Bereitstellung des Onlineangebotes und Webhosting
 								li
-									a.index-link(href="#s13")  Cloud-Dienste
+									a.index-link(href="#s13")
+										v-icon(color="#319ae3").toc-icon cloud
+										span.tocText Cloud-Dienste
 								li
-									a.index-link(href="#s14")  Webanalyse und Optimierung
+									a.index-link(href="#s14")
+										v-icon(color="#319ae3").toc-icon mdi-chart-areaspline
+										span.tocText Webanalyse und Optimierung
 									ul 
 										li
 											a.index-link(href="#s14-1") Eingesetzte Dienste und Diensteanbieter
 								li
-									a.index-link(href="#s15")  Onlinemarketing
+									a.index-link(href="#s15")
+										v-icon(color="#319ae3").toc-icon mdi-cart
+										span.tocText Onlinemarketing
 									ul 
 										li
 											a.index-link(href="#s15-1") Eingesetzte Dienste und Diensteanbieter
 								li
-									a.index-link(href="#s16")  Präsenzen in sozialen Netzwerken
+									a.index-link(href="#s16")
+										v-icon(color="#319ae3").toc-icon mdi-cellphone-message
+										span.tocText Präsenzen in sozialen Netzwerken
 									ul 
 										li
 											a.index-link(href="#s16-1") Eingesetzte Dienste und Diensteanbieter
 								li
-									a.index-link(href="#s17")  Plugins und eingebettete Funktionen sowie Inhalte
+									a.index-link(href="#s17")
+										v-icon(color="#319ae3").toc-icon mdi-toy-brick-outline
+										span.tocText Plugins und eingebettete Funktionen sowie Inhalte
 									ul 
 										li
 											a.index-link(href="#s17-1") Eingesetzte Dienste und Diensteanbieter
 								li
-									a.index-link(href="#s18")  Planung, Organisation und Hilfswerkzeuge
+									a.index-link(href="#s18")
+										v-icon(color="#319ae3").toc-icon mdi-clipboard-list-outline
+										span.tocText Planung, Organisation und Hilfswerkzeuge
 								li
-									a.index-link(href="#s19")  Löschung von Daten
+									a.index-link(href="#s19")
+										v-icon(color="#319ae3").toc-icon mdi-trash-can
+										span.tocText Löschung von Daten
 								li
-									a.index-link(href="#s20")  Änderung und Aktualisierung der Datenschutzerklärung
+									a.index-link(href="#s20")
+										v-icon(color="#319ae3").toc-icon mdi-update
+										span.tocText Änderung und Aktualisierung der Datenschutzerklärung
 								li
-									a.index-link(href="#s21")  Rechte der betroffenen Personen
+									a.index-link(href="#s21")
+										v-icon(color="#319ae3").toc-icon gavel
+										span.tocText Rechte der betroffenen Personen
 								li
-									a.index-link(href="#s22")  Begriffsdefinitionen
+									a.index-link(href="#s22")
+										v-icon(color="#319ae3").toc-icon mdi-book-information-variant
+										span.tocText Begriffsdefinitionen
 								li
-									a.index-link(href="#s23")  Quellen
+									a.index-link(href="#s23")
+										v-icon(color="#319ae3").toc-icon search
+										span.tocText Quellen
 
 		v-layout
 			v-flex(xs12)
@@ -1414,7 +1462,12 @@ import KontaktDaten from "@/components/KontaktDaten";
 // @ is an alias to /src
 export default {
     name: "Datenschutzerklaerung",
-    components: { Section, KontaktDaten }
+	components: { Section, KontaktDaten },
+	methods: {
+        scrollToTop() {
+            this.$vuetify.goTo(0);
+		}
+	}
 };
 </script>
 
@@ -1489,6 +1542,21 @@ ul ul li
 		vertical-align: middle
 		padding-right: 5px
 
-	.dataTable td
-		padding-left: 20px
+.dataTable td
+	padding-left: 20px
+
+.toc-icon
+	height: 1em
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	vertical-align: middle
+	padding-right: 0.3em
+	text-decoration: none!important
+
+.tocText
+	text-decoration: underline
+
+.index-link
+	text-decoration: none
 </style>
