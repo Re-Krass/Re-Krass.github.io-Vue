@@ -161,13 +161,12 @@
 		// Section 6 - Author
 		v-layout
 			v-flex(xs12)
-				Section(icon="code" title="Author")
+				Section(icon="mdi-account" title="Author")
 					.window__content
 						v-layout#users-card(wrap justify-content-center)
 							v-layout(justify-content-center)
 								v-flex(xs12 offset-xs2 sm12 offset-sm4 offset-md5)
 									ImageCard(image-src="https://avatars1.githubusercontent.com/u/38668040" title-name="Re-Krass" link-href="https://github.com/Re-Krass")
-
 </template>
 
 <script>
