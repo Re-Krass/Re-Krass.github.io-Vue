@@ -63,6 +63,18 @@ v-app#app(dark)
                                 v-card(outlined tile)
                                     | sdwsdsd
 
+
+            <template>
+                <v-container class="grey lighten-5">
+                    <v-row v-for="n in 2" :key="n" :class="n === 1 ? 'mb-6' : ''" no-gutters>
+                    <v-col v-for="k in n + 1" :key="k">
+                        <v-card class="pa-2" outlined tile>{{ k }} of {{ n + 1 }}
+                        </v-card>
+                    </v-col>
+                    </v-row>
+                </v-container>
+            </template>
+                
             v-footer.pa-2.mt-2.caption.text-center
                 v-container.pa-0.ma-0(fluid)
                     v-layout(row fill-height align-center)
@@ -166,6 +178,7 @@ v-app#app(dark)
 <script>
 import { setInterval, clearInterval, setTimeout } from "timers";
 import axiosInstance from "@/store/api";
+import Footer from "@/components/Footer";
 export default {
     name: "App",
     data() {
@@ -176,6 +189,9 @@ export default {
             typingText: true,
             lastModified: ""
         };
+    },
+    components: {
+        Footer
     },
     watch: {
         $route: function() {
