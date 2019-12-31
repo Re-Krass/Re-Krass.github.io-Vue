@@ -73,3 +73,13 @@ pnpm install -g @vue/cli-plugin-eslint
 
 See [Vue-Clie](https://cli.vuejs.org/guide/installation.html) instructions.
 
+## PNPM
+
+Search for outdated packages
+```bash
+pnpm outdated --depth=0
+# global
+pnpm outdated -g --depth=0
+```
+
+
