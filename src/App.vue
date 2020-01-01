@@ -260,13 +260,13 @@ export default {
             this.$vuetify.goTo(0);
         },
         getLastModified() {
-            console.log(this);
+            // console.log(this);
             var self = this;
             axiosInstance
                 .head("index.html")
                 .then(function(response) {
-                    console.log(self);
-                    console.log(response.headers["last-modified"]);
+                    // console.log(self);
+                    // console.log(response.headers["last-modified"]);
                     self.lastModified = response.headers["last-modified"];
                 })
                 .catch(error => console.log(error));
