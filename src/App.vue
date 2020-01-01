@@ -80,67 +80,56 @@ v-app#app(dark)
 
             v-footer.pa-0.mt-2.caption.text-center(padless)
                 v-container.pa-0.ma-0(grid-list-md fluid)
-                            //- v-layout.pa-0.ma-0(fill-height)
-                                //- v-flex.pa-0.ma-0(xs12)
-                            v-row.text-xs-center.centv(
-                                no-gutters
-                                justify="center"
-                                align="center"
-                                )
-                                    //- v-layout(wrap)
-                                    v-flex(xs12 sm12 md4)
-                                        v-col.pa-0.ma-0
-                                            v-card.text-center(
-                                                outlined 
-                                                tile
-                                                color="transparent"
-                                                elevation=0
-                                                )
-                                                //- (xs12 sm6 md6 lg xl)
-                                                v-card-actions.pa-0.ma-0
-                                                    v-flex.pa-0.ma-0(xs12)
-                                                        v-layout(wrap)
-                                                            v-flex(xs12 sm6 md6)
-                                                                v-row.text-xs-center.centv(
-                                                                    no-gutters
-                                                                    justify="center"
-                                                                    align="center"
-                                                                    ) 
-                                                                    //- v-spacer
-                                                                    //- router-link(
-                                                                        to="/datenschutzerklaerung") Datenschutzerklärung
-                                                                    v-btn(
-                                                                        @click.native="scrollToTop"
-                                                                        to="/datenschutzerklaerung") Datenschutzerklärung
-                                                            v-flex(xs12 sm6 md6)
-                                                                v-row.text-xs-center.centv(
-                                                                    no-gutters
-                                                                    justify="center"
-                                                                    align="center"
-                                                                    )
-                                                                    v-btn(
-                                                                        @click.native="scrollToTop"
-                                                                        to="/impressum"
-                                                                    ) Impressum
-                                    v-flex(xs12 sm12 md4)
-                                        v-col.pa-0.ma-0
-                                            v-card(
-                                                outlined 
-                                                tile
-                                                color="transparent"
-                                                elevation=0
-                                                )
-                                                v-card-text 
-                                                    | last updated: {{ lastModified }} ©
-                                                    | {{ new Date().getFullYear() }}
-                                    v-flex(xs12 sm12 md4)
-                                        v-col.pa-0.ma-0
-                                            v-card(
-                                                outlined 
-                                                tile
-                                                color="transparent"
-                                                elevation=0
-                                                ) ssadasdasdasdasddsadasdasdasdasasdsad
+                    v-row.text-xs-center(
+                        no-gutters
+                        justify="center"
+                        align="center"
+                        )
+                        v-flex(xs12 sm12 md4)
+                            v-col.pa-0.ma-0
+                                v-card.text-center(
+                                    outlined 
+                                    tile
+                                    color="transparent"
+                                    elevation=0
+                                    )
+                                    v-card-actions.pa-0.ma-0
+                                        v-container.pa-0.ma-0(grid-list-md fluid)
+                                            v-row.text-xs-center(
+                                                no-gutters
+                                                justify="center"
+                                                align="center") 
+                                                    v-flex(xs12 sm12 md12 lg6)
+                                                        v-col.pa-0.ma-0
+                                                            v-btn.footer-btn(
+                                                                @click.native="scrollToTop"
+                                                                to="/datenschutzerklaerung"
+                                                                depressed) Datenschutzerklärung
+                                                    v-flex(xs12 sm12 md12 lg6)
+                                                        v-col.pa-0.ma-0
+                                                            v-btn.footer-btn(
+                                                                @click.native="scrollToTop"
+                                                                to="/impressum"
+                                                                depressed) Impressum
+                        v-flex(xs12 sm12 md4)
+                            v-col.pa-0.ma-0
+                                v-card(
+                                    outlined 
+                                    tile
+                                    color="transparent"
+                                    elevation=0
+                                    )
+                                    v-card-text 
+                                        | last updated: {{ lastModified }} ©
+                                        | {{ new Date().getFullYear() }}
+                        v-flex(xs12 sm12 md4)
+                            v-col.pa-0.ma-0
+                                v-card(
+                                    outlined 
+                                    tile
+                                    color="transparent"
+                                    elevation=0
+                                    ) ssadasdasdasdasddsadasdasdasdasasdsad
             //- v-footer.pa-2.mt-2.caption.text-center
                 v-container.pa-0.ma-0(fluid)
                     v-layout(row fill-height align-center)
@@ -172,73 +161,6 @@ v-app#app(dark)
                                         @click.native="scrollToTop"
                                         to="/impressum"
                                     ) Impressum
-                //- v-layout(
-                    align-center 
-                    justify-space-between 
-                    row 
-                    fill-height)
-                    v-card.pa-1(
-                        color="transparent"
-                        elevation=0)
-                        |             
-                    v-card.pa-1(
-                        color="transparent"
-                        elevation=0)
-                        | last updated: {{ lastModified }} ©
-                        | {{ new Date().getFullYear() }}
-                    v-card.pa-1(
-                        color="transparent"
-                        elevation=0)
-                        v-btn(
-                            to="/datenschutzerklaerung"
-                        ) Datenschutzerklärung
-                        v-btn(
-                            to="/impressum"
-                        ) Impressum
-
-                //- v-container.grey.lighten-5
-                    v-row(no-gutters)
-                        v-col(v-for="n in 3" :key="n" cols="12" sm="4")
-                            v-card.pa-2(outlined tile)
-                                | One of three columns
-                //- v-container.grey.lighten-5
-                    v-row(no-gutters)
-                        v-col(
-                            cols="12" 
-                            sm="4")
-                            v-card.pa-2(
-                                outlined 
-                                tile)
-                                | One of three columns
-                        v-col(
-                            cols="12" 
-                            sm="4")
-                            v-card.pa-2(
-                                outlined 
-                                tile)
-                                | One of three columns
-                //- v-container(fluid)
-                    v-row
-                        v-col(cols="12")
-                            v-row.grey.lighten-5(
-                                align="center" 
-                                justify="space-around" 
-                            )
-                                v-card.ma-3.pa-6(
-                                    outlined
-                                    tile
-                                ) dsds
-                                    | Column 1
-                                v-card.ma-3.pa-6(
-                                    outlined
-                                    tile
-                                )
-                                    | Column 2
-                                v-card.ma-3.pa-6(
-                                    outlined
-                                    tile
-                                )
-                                    | Column 3
 </template>
 
 <script>
@@ -419,5 +341,8 @@ html
     justify-content: center
     vertical-align: middle
 
-.p-m-zero
+.footer-btn
+    border: 0
+    padding-left: 1em
+    padding-right: 1em
 </style>
