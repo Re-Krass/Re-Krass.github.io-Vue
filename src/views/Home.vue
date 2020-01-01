@@ -166,7 +166,8 @@
                         v-layout#users-card(wrap justify-content-center)
                             v-layout(justify-content-center)
                                 v-flex(xs12 offset-xs2 sm12 offset-sm4 offset-md5)
-                                    ImageCard(image-src="https://avatars1.githubusercontent.com/u/38668040" title-name="Re-Krass" link-href="https://github.com/Re-Krass")
+                                    v-flex(text-xs-center align-center)
+                                        ImageCard(image-src="https://avatars1.githubusercontent.com/u/38668040" title-name="Re-Krass" link-href="https://github.com/Re-Krass")
 </template>
 
 <script>
@@ -204,6 +205,10 @@ ul ul li
 #text-card
     padding-left: 1%
     padding-right: 1%
+
+#users-card
+    padding-top: 1em
+    padding-bottom: 1em
 
 .image-container
     display: flex
