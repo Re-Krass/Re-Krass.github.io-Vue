@@ -104,6 +104,20 @@ Vue CLI v4.1.2
 # add vuetify
 vue add vuetify
 
+�📦  Installing vue-cli-plugin-vuetify...
+
+The "store" setting has been renamed to "store-dir". Please use the new name.
+✔  Successfully installed plugin: vue-cli-plugin-vuetify
+
+? Choose a preset: Configure (advanced)
+? Use a pre-made template? (will replace App.vue and HelloWorld.vue) Yes
+? Use custom theme? No
+? Use custom properties (CSS variables)? Yes
+? Select icon font Material Design Icons
+? Use fonts as a dependency (for Electron or offline)? Yes
+? Use a-la-carte components? Yes
+? Select locale English
+
 # Vue UI install
 // ensure Vue CLI is >= 3.0
 $ vue --version
