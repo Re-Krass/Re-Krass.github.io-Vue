@@ -27,6 +27,8 @@ v-app#app(dark)
                         v-icon close
             router-view
 
+            //- Footer
+
             //- v-footer 
                 div
                     v-container.grey.lighten-5.mb-6
@@ -64,18 +66,53 @@ v-app#app(dark)
                                     | sdwsdsd
 
 
-            <template>
-                <v-container class="grey lighten-5">
-                    <v-row v-for="n in 2" :key="n" :class="n === 1 ? 'mb-6' : ''" no-gutters>
-                    <v-col v-for="k in n + 1" :key="k">
-                        <v-card class="pa-2" outlined tile>{{ k }} of {{ n + 1 }}
-                        </v-card>
-                    </v-col>
-                    </v-row>
-                </v-container>
-            </template>
-                
+            //- <template>
+            //-     <v-container class="grey lighten-5">
+            //-         <v-row v-for="n in 2" :key="n" :class="n === 1 ? 'mb-6' : ''" no-gutters>
+            //-         <v-col v-for="k in n + 1" :key="k">
+            //-             <v-card class="pa-2" outlined tile>{{ k }} of {{ n + 1 }}
+            //-             </v-card>
+            //-         </v-col>
+            //-         </v-row>
+            //-     </v-container>
+            //- </template>
+
+
             v-footer.pa-2.mt-2.caption.text-center
+                v-container
+                    v-row(no-gutters)
+                        v-col
+                            v-card.pa-2(
+                                outlined 
+                                tile
+                                )
+                                | k of n + 1
+                        v-col
+                            v-card.pa-2(
+                                outlined 
+                                tile
+                                )
+                                v-card-text 
+                                    | last updated: {{ lastModified }} ©
+                                    | {{ new Date().getFullYear() }}
+                        v-col
+                            v-card.pa-2(
+                                outlined 
+                                tile
+                                )
+                                v-card-actions.pa-0.ma-0
+                                    v-spacer
+                                    //- router-link(
+                                        to="/datenschutzerklaerung") Datenschutzerklärung
+                                    v-btn(
+                                        @click.native="scrollToTop"
+                                        to="/datenschutzerklaerung") Datenschutzerklärung
+                                    v-btn(
+                                        @click.native="scrollToTop"
+                                        to="/impressum"
+                                    ) Impressum
+                
+            //- v-footer.pa-2.mt-2.caption.text-center
                 v-container.pa-0.ma-0(fluid)
                     v-layout(row fill-height align-center)
                         v-flex(xs4 text-xs-left)
