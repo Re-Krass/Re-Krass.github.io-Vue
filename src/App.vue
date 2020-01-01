@@ -177,8 +177,8 @@ v-app#app(dark)
 
 <script>
 import { setInterval, clearInterval, setTimeout } from "timers";
-import axiosInstance from "@/store/api";
-import Footer from "@/components/Footer";
+import axiosInstance from "@/store-dir/api";
+// import Footer from "@/components/Footer";
 export default {
     name: "App",
     data() {
@@ -190,9 +190,9 @@ export default {
             lastModified: ""
         };
     },
-    components: {
-        Footer
-    },
+    // components: {
+    //     Footer
+    // },
     watch: {
         $route: function() {
             this.displayTitle();
