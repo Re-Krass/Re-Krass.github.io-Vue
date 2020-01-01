@@ -127,7 +127,7 @@ export default {
             this.$vuetify.goTo(0);
         },
         getLastModified() {
-            console.log(this);
+            // console.log(this);
             var self = this;
             axiosInstance
                 .head("index.html")
@@ -136,7 +136,7 @@ export default {
                     // console.log(response.headers["last-modified"]);
                     self.lastModified = response.headers["last-modified"];
                 })
-                .catch(error => console.log(error));
+                .catch();
         },
         switchTheme() {
             this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
