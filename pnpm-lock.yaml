@@ -1,6 +1,7 @@
 dependencies:
   '@mdi/font': 3.9.97
   core-js: 3.6.1
+  eslint-plugin-pug: 1.1.1
   husky: 3.1.0
   roboto-fontface: 0.10.0
   vue: 2.6.11
@@ -14,7 +15,7 @@ devDependencies:
   '@vue/cli-plugin-router': 4.1.2_@vue+cli-service@4.1.2
   '@vue/cli-plugin-unit-jest': 4.1.2_8e925c9597351abcac84c95806a423be
   '@vue/cli-plugin-vuex': 4.1.2_@vue+cli-service@4.1.2
-  '@vue/cli-service': 4.1.2_53a20a770def511c7d04f230b044fb2d
+  '@vue/cli-service': 4.1.2_106975839fe7c8b9fc5cdca9faa21cd5
   '@vue/eslint-config-prettier': 5.1.0_5245c988bcb90338057324bbfb65fa35
   '@vue/test-utils': 1.0.0-beta.29_d81dac297579cfd5597855dabf60f13b
   babel-eslint: 10.0.3_eslint@5.16.0
@@ -23,6 +24,8 @@ devDependencies:
   eslint-plugin-vue: 5.2.3_eslint@5.16.0
   lint-staged: 9.5.0
   prettier: 1.19.1
+  pug: 2.0.4
+  pug-plain-loader: 1.0.0_pug@2.0.4
   sass: 1.24.0
   sass-loader: 8.0.0_sass@1.24.0
   vue-cli-plugin-vuetify: 2.0.3
@@ -1102,6 +1105,10 @@ packages:
       webpack: ^2.0.0 || ^3.0.0 || ^4.0.0
     resolution:
       integrity: sha512-cWKrGaFX+rfbMrAxVv56DzhPNqOJPZuNIS2HGMELtgGzb+vsMzyig9mml5gZ/hr2BGtSLV+dP2LUEuAL8aG2mQ==
+  /@types/babel-types/7.0.7:
+    dev: true
+    resolution:
+      integrity: sha512-dBtBbrc+qTHy1WdfHYjBwRln4+LWqASWakLHsWHR2NWHIFkv4W3O070IGoGLEBrJBvct3r0L1BUPuvURi7kYUQ==
   /@types/babel__core/7.1.3:
     dependencies:
       '@babel/parser': 7.7.7
@@ -1131,6 +1138,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-yGeB2dHEdvxjP0y4UbRtQaSkXJ9649fYCmIdRoul5kfAoGCwxuCbMhag0k3RPfnuh9kPGm8x89btcfDEXdVWGw==
+  /@types/babylon/6.16.5:
+    dependencies:
+      '@types/babel-types': 7.0.7
+    dev: true
+    resolution:
+      integrity: sha512-xH2e58elpj1X4ynnKp9qSnWlsRTIs6n3tgLGNfwAGHwePw0mulHQllV34n0T25uYSu1k0hRKkWXF890B1yS47w==
   /@types/color-name/1.1.1:
     dev: true
     resolution:
@@ -1312,7 +1325,7 @@ packages:
     dependencies:
       '@babel/core': 7.7.7
       '@vue/babel-preset-app': 4.1.2
-      '@vue/cli-service': 4.1.2_53a20a770def511c7d04f230b044fb2d
+      '@vue/cli-service': 4.1.2_106975839fe7c8b9fc5cdca9faa21cd5
       '@vue/cli-shared-utils': 4.1.2
       babel-loader: 8.0.6_@babel+core@7.7.7+webpack@4.41.5
       cache-loader: 4.1.0_webpack@4.41.5
@@ -1325,7 +1338,7 @@ packages:
       integrity: sha512-/j998Q16h8gbYcYf2sE+CYobCpIzDYtOJ76JuhJZnCfy5H8gh4g+x5fepbLs0gOW/cZ2OQxJFx7Jd/yT2/G/qQ==
   /@vue/cli-plugin-e2e-cypress/4.1.2_24f387d243024b6d224425483548dff1:
     dependencies:
-      '@vue/cli-service': 4.1.2_53a20a770def511c7d04f230b044fb2d
+      '@vue/cli-service': 4.1.2_106975839fe7c8b9fc5cdca9faa21cd5
       '@vue/cli-shared-utils': 4.1.2
       cypress: 3.8.1
       eslint-plugin-cypress: 2.8.1_eslint@5.16.0
@@ -1337,7 +1350,7 @@ packages:
       integrity: sha512-F3vve5zAIp8FkMa7kRPCVwRSnubQDjEnD5EfJ1YuFXDkSJ4Y3lwDlA4TKRLZ+SZPbB/1IUMDwEUzBuogYgjCnQ==
   /@vue/cli-plugin-eslint/4.1.2_24f387d243024b6d224425483548dff1:
     dependencies:
-      '@vue/cli-service': 4.1.2_53a20a770def511c7d04f230b044fb2d
+      '@vue/cli-service': 4.1.2_106975839fe7c8b9fc5cdca9faa21cd5
       '@vue/cli-shared-utils': 4.1.2
       eslint: 5.16.0
       eslint-loader: 2.2.1_eslint@5.16.0+webpack@4.41.5
@@ -1352,7 +1365,7 @@ packages:
       integrity: sha512-j6Z6tyhas7AFBwSvQ8JdKPLfaakZbwmK0+Xk8H6BK1/GrEpSCsb8pzBV8faStbKCPUO9vlKEuO319kHypUTJ1g==
   /@vue/cli-plugin-router/4.1.2_@vue+cli-service@4.1.2:
     dependencies:
-      '@vue/cli-service': 4.1.2_53a20a770def511c7d04f230b044fb2d
+      '@vue/cli-service': 4.1.2_106975839fe7c8b9fc5cdca9faa21cd5
       '@vue/cli-shared-utils': 4.1.2
     dev: true
     peerDependencies:
@@ -1364,7 +1377,7 @@ packages:
       '@babel/core': 7.7.7
       '@babel/plugin-transform-modules-commonjs': 7.7.5_@babel+core@7.7.7
       '@types/jest': 24.0.25
-      '@vue/cli-service': 4.1.2_53a20a770def511c7d04f230b044fb2d
+      '@vue/cli-service': 4.1.2_106975839fe7c8b9fc5cdca9faa21cd5
       '@vue/cli-shared-utils': 4.1.2
       babel-core: 7.0.0-bridge.0_@babel+core@7.7.7
       babel-jest: 24.9.0_@babel+core@7.7.7
@@ -1386,13 +1399,13 @@ packages:
       integrity: sha512-9DbN/JA37RmZgEczowDJE2pZjS/6nqMoP21hiT2ZgGq0rcfbqtH7/gDjzqkNX/1URaaPPT0PYSNS6lMMur6eAA==
   /@vue/cli-plugin-vuex/4.1.2_@vue+cli-service@4.1.2:
     dependencies:
-      '@vue/cli-service': 4.1.2_53a20a770def511c7d04f230b044fb2d
+      '@vue/cli-service': 4.1.2_106975839fe7c8b9fc5cdca9faa21cd5
     dev: true
     peerDependencies:
       '@vue/cli-service': ^3.0.0 || ^4.0.0-0
     resolution:
       integrity: sha512-qsf8sfUUtTuFf24iB6vbdapvCTCt4FqLj7r66POutGWmBCTlPHsMaAXMaD2ZD53/hqr8QHd/557IUensSwj5wA==
-  /@vue/cli-service/4.1.2_53a20a770def511c7d04f230b044fb2d:
+  /@vue/cli-service/4.1.2_106975839fe7c8b9fc5cdca9faa21cd5:
     dependencies:
       '@intervolga/optimize-cssnano-plugin': 1.0.6_webpack@4.41.5
       '@soda/friendly-errors-webpack-plugin': 1.7.1_webpack@4.41.5
@@ -1434,6 +1447,7 @@ packages:
       minimist: 1.2.0
       portfinder: 1.0.25
       postcss-loader: 3.0.0
+      pug-plain-loader: 1.0.0_pug@2.0.4
       read-pkg: 5.2.0
       sass-loader: 8.0.0_sass@1.24.0
       ssri: 7.1.0
@@ -1698,6 +1712,12 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-Il80Qs2WjYlJIBNzNkK6KYqlVMTbZLXgHx2oT0pU/fjRHyEp+PEfEPY0R3WCwAGVOtauxh1hOxNgIf5bv7dQpA==
+  /acorn-globals/3.1.0:
+    dependencies:
+      acorn: 4.0.13
+    dev: true
+    resolution:
+      integrity: sha1-/YJw9x+7SZawBPqIDuXUZXOnMb8=
   /acorn-globals/4.3.4:
     dependencies:
       acorn: 6.4.0
@@ -1719,6 +1739,19 @@ packages:
       node: '>=0.4.0'
     resolution:
       integrity: sha512-7evsyfH1cLOCdAzZAd43Cic04yKydNx0cF+7tiA19p1XnLLPU4dpCQOqpjqwokFe//vS0QqfqqjCS2JkiIs0cA==
+  /acorn/3.3.0:
+    dev: true
+    engines:
+      node: '>=0.4.0'
+    hasBin: true
+    resolution:
+      integrity: sha1-ReN/s56No/JbruP/U2niu18iAXo=
+  /acorn/4.0.13:
+    engines:
+      node: '>=0.4.0'
+    hasBin: true
+    resolution:
+      integrity: sha1-EFSVrlNh1pe9GVyCUZLhrX8lN4c=
   /acorn/5.7.3:
     dev: true
     engines:
@@ -1780,6 +1813,16 @@ packages:
     dev: true
     resolution:
       integrity: sha512-TXtUUEYHuaTEbLZWIKUr5pmBuhDLy+8KYtPYdcV8qC+pOZL+NKqYwvWSRrVXHn+ZmRRAu8vJTAznH7Oag6RVRw==
+  /align-text/0.1.4:
+    dependencies:
+      kind-of: 3.2.2
+      longest: 1.0.1
+      repeat-string: 1.6.1
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-DNkKVhCT810KmSVsIrcGlDP60Rc=
   /alphanum-sort/1.0.2:
     dev: true
     resolution:
@@ -1949,6 +1992,10 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-qJS3XUvE9s1nnvMkSp/Y9Gri1Cg=
+  /asap/2.0.6:
+    dev: true
+    resolution:
+      integrity: sha1-5QNHYR1+aQlDIIu9r+vLwvuGbUY=
   /asn1.js/4.10.1:
     dependencies:
       bn.js: 4.11.8
@@ -2604,6 +2651,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-yjw2iKTpzzpM2nd9xNy8cTJJz3M=
+  /camelcase/1.2.1:
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-m7UwTS4LVmmLLHWLCKPqqdqlijk=
   /camelcase/4.1.0:
     dev: true
     engines:
@@ -2647,6 +2700,15 @@ packages:
     dev: true
     resolution:
       integrity: sha1-G2gcIf+EAzyCZUMJBolCDRhxUdw=
+  /center-align/0.1.3:
+    dependencies:
+      align-text: 0.1.4
+      lazy-cache: 1.0.4
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-qg0yYptu6XIgBBHL1EYckHvCt60=
   /chalk/1.1.3:
     dependencies:
       ansi-styles: 2.2.1
@@ -2677,6 +2739,11 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-4D3B6Wf41KOYRFdszmDqMCGq5VV/uMAB273JILmO+3jAlh8X4qDtdtgCR3fxtbLEMzSx22QdhnDcJvu2u1fVwg==
+  /character-parser/2.2.0:
+    dependencies:
+      is-regex: 1.0.5
+    resolution:
+      integrity: sha1-x84o821LzZdE5f/CxfzeHHMmH8A=
   /chardet/0.7.0:
     dev: true
     resolution:
@@ -2825,6 +2892,14 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-2pzOUxWcLlXWtn+Jd6js3o12TysNOOVes/aQfg+MT/35vrxWzedHlLwyoJpXjsFKWm95BTNEcMGD9+a7mKzZkQ==
+  /cliui/2.1.0:
+    dependencies:
+      center-align: 0.1.3
+      right-align: 0.1.3
+      wordwrap: 0.0.2
+    dev: true
+    resolution:
+      integrity: sha1-S0dXYP+AJkx2LDoXGQMukcf+oNE=
   /cliui/4.1.0:
     dependencies:
       string-width: 2.1.1
@@ -3047,6 +3122,15 @@ packages:
       node: '>= 0.10.0'
     resolution:
       integrity: sha512-DW46nrsMJgy9kqAbPt5rKaCr7uFtpo4mSUvLHIUbJEjm0vo+aY5QLwBUq3FK4tRnJr/X0Psc0C4jf/h+HtXSMw==
+  /constantinople/3.1.2:
+    dependencies:
+      '@types/babel-types': 7.0.7
+      '@types/babylon': 6.16.5
+      babel-types: 6.26.0
+      babylon: 6.18.0
+    dev: true
+    resolution:
+      integrity: sha512-yePcBqEFhLOqSBtwYOGGS1exHo/s1xjekXiinh4itpNQGCu4KA1euPh1fg07N2wMITZXQkBz75Ntdt1ctGZouw==
   /constants-browserify/1.0.0:
     dev: true
     resolution:
@@ -3738,6 +3822,10 @@ packages:
       node: '>=6.0.0'
     resolution:
       integrity: sha512-yS+Q5i3hBf7GBkd4KG8a7eBNNWNGLTaEwwYWUijIYM7zrlYDM0BFXHjjPWlWZ1Rg7UaddZeIDmi9jF3HmqiQ2w==
+  /doctypes/1.1.0:
+    dev: true
+    resolution:
+      integrity: sha1-6oCxBqh1OHdOijpKWv4pPeSJ4Kk=
   /dom-converter/0.2.0:
     dependencies:
       utila: 0.4.0
@@ -4042,6 +4130,14 @@ packages:
       prettier: '>= 1.13.0'
     resolution:
       integrity: sha512-GlolCC9y3XZfv3RQfwGew7NnuFDKsfI4lbvRK+PIIo23SFH+LemGs4cKwzAaRa+Mdb+lQO/STaIayno8T5sJJA==
+  /eslint-plugin-pug/1.1.1:
+    dependencies:
+      pug-lexer: 3.1.0
+      pug-parser: 4.0.2
+      pug-walk-extract-text: 1.1.0
+    dev: false
+    resolution:
+      integrity: sha512-ozlMzxaowx03CPUTpsNGbaLQPx20Pkmcdep9FvDMqGhXm310ryK5oHYrpQ9b4Vx5muuvPnXdWZdXFg0WCaK1sw==
   /eslint-plugin-vue/5.2.3_eslint@5.16.0:
     dependencies:
       eslint: 5.16.0
@@ -4809,7 +4905,6 @@ packages:
     resolution:
       integrity: sha512-+ux3lx6peh0BpvY0JebGyZoiR4D+oYzdPZMKJwkZ+sFkNJzpL7tXc/wehS49gUAxg3tmMHPHZkA8JU2rhhgDHw==
   /function-bind/1.1.1:
-    dev: true
     resolution:
       integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
   /functional-red-black-tree/1.0.1:
@@ -5098,7 +5193,6 @@ packages:
   /has/1.0.3:
     dependencies:
       function-bind: 1.1.1
-    dev: true
     engines:
       node: '>= 0.4.0'
     resolution:
@@ -5682,6 +5776,12 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-YTObbyR1/Hcv2cnYP1yFddwVSuE=
+  /is-expression/3.0.0:
+    dependencies:
+      acorn: 4.0.13
+      object-assign: 4.1.1
+    resolution:
+      integrity: sha1-Oayqa+f9HzRx3ELHQW5hwkMXrJ8=
   /is-extendable/0.1.1:
     dev: true
     engines:
@@ -5846,7 +5946,6 @@ packages:
   /is-regex/1.0.5:
     dependencies:
       has: 1.0.3
-    dev: true
     engines:
       node: '>= 0.4'
     resolution:
@@ -6444,6 +6543,10 @@ packages:
       node: '>=1.0.0'
     resolution:
       integrity: sha1-NiITz4YPRo8BJfxslqvBdCUx+Ug=
+  /js-stringify/1.0.2:
+    dev: true
+    resolution:
+      integrity: sha1-Fzb939lyTyijaCrcYjCufk6Weds=
   /js-tokens/3.0.2:
     dev: true
     resolution:
@@ -6604,6 +6707,13 @@ packages:
       '0': node >=0.6.0
     resolution:
       integrity: sha1-MT5mvB5cwG5Di8G3SZwuXFastqI=
+  /jstransformer/1.0.0:
+    dependencies:
+      is-promise: 2.1.0
+      promise: 7.3.1
+    dev: true
+    resolution:
+      integrity: sha1-7Yvwkh4vPx7U1cGkT2hwntJHIsM=
   /killable/1.0.1:
     dev: true
     resolution:
@@ -6661,6 +6771,12 @@ packages:
       node: '> 0.8'
     resolution:
       integrity: sha1-eZllXoZGwX8In90YfRUNMyTVRRM=
+  /lazy-cache/1.0.4:
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-odePw6UEdMuAhF07O24dpJpEbo4=
   /lcid/2.0.0:
     dependencies:
       invert-kv: 2.0.0
@@ -6958,6 +7074,12 @@ packages:
       node: '>= 0.6.0'
     resolution:
       integrity: sha512-Sgr5lbboAUBo3eXCSPL4/KoVz3ROKquOjcctxmHIt+vol2DrqTQe3SwkKKuYhEiWB5kYa13YyopJ69deJ1irzQ==
+  /longest/1.0.1:
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-MKCy2jj3N3DoKUoNIuZiXtd9AJc=
   /loose-envify/1.4.0:
     dependencies:
       js-tokens: 4.0.0
@@ -7570,7 +7692,6 @@ packages:
     resolution:
       integrity: sha512-fexhUFFPTGV8ybAtSIGbV6gOkSv8UtRbDBnAyLQw4QPKkgNlsH2ByPGtMUqdWkos6YCRmAqViwgZrJc/mRDzZQ==
   /object-assign/4.1.1:
-    dev: true
     engines:
       node: '>=0.10.0'
     resolution:
@@ -8625,6 +8746,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-mEcocL8igTL8vdhoEputEsPAKeM=
+  /promise/7.3.1:
+    dependencies:
+      asap: 2.0.6
+    dev: true
+    resolution:
+      integrity: sha512-nolQXZ/4L+bP/UGlkfaIujX9BKxGwmQ9OT4mOt5yvy8iK1h3wqTEJCijzGANTCCl9nWjY41juyAn2K3Q1hLLTg==
   /prompts/2.3.0:
     dependencies:
       kleur: 3.0.3
@@ -8670,6 +8797,127 @@ packages:
     dev: true
     resolution:
       integrity: sha512-zVpa8oKZSz5bTMTFClc1fQOnyyEzpl5ozpi1B5YcvBrdohMjH2rfsBtyXcuNuwjsDIXmBYlF2N5FlJYhR29t8Q==
+  /pug-attrs/2.0.4:
+    dependencies:
+      constantinople: 3.1.2
+      js-stringify: 1.0.2
+      pug-runtime: 2.0.5
+    dev: true
+    resolution:
+      integrity: sha512-TaZ4Z2TWUPDJcV3wjU3RtUXMrd3kM4Wzjbe3EWnSsZPsJ3LDI0F3yCnf2/W7PPFF+edUFQ0HgDL1IoxSz5K8EQ==
+  /pug-code-gen/2.0.2:
+    dependencies:
+      constantinople: 3.1.2
+      doctypes: 1.1.0
+      js-stringify: 1.0.2
+      pug-attrs: 2.0.4
+      pug-error: 1.3.3
+      pug-runtime: 2.0.5
+      void-elements: 2.0.1
+      with: 5.1.1
+    dev: true
+    resolution:
+      integrity: sha512-kROFWv/AHx/9CRgoGJeRSm+4mLWchbgpRzTEn8XCiwwOy6Vh0gAClS8Vh5TEJ9DBjaP8wCjS3J6HKsEsYdvaCw==
+  /pug-error/1.3.3:
+    resolution:
+      integrity: sha512-qE3YhESP2mRAWMFJgKdtT5D7ckThRScXRwkfo+Erqga7dyJdY3ZquspprMCj/9sJ2ijm5hXFWQE/A3l4poMWiQ==
+  /pug-filters/3.1.1:
+    dependencies:
+      clean-css: 4.2.1
+      constantinople: 3.1.2
+      jstransformer: 1.0.0
+      pug-error: 1.3.3
+      pug-walk: 1.1.8
+      resolve: 1.14.1
+      uglify-js: 2.8.29
+    dev: true
+    resolution:
+      integrity: sha512-lFfjNyGEyVWC4BwX0WyvkoWLapI5xHSM3xZJFUhx4JM4XyyRdO8Aucc6pCygnqV2uSgJFaJWW3Ft1wCWSoQkQg==
+  /pug-lexer/3.1.0:
+    dependencies:
+      character-parser: 2.2.0
+      is-expression: 3.0.0
+      pug-error: 1.3.3
+    dev: false
+    resolution:
+      integrity: sha1-/QhzdtSmdbT1n4/vQiiDQ06VgaI=
+  /pug-lexer/4.1.0:
+    dependencies:
+      character-parser: 2.2.0
+      is-expression: 3.0.0
+      pug-error: 1.3.3
+    dev: true
+    resolution:
+      integrity: sha512-i55yzEBtjm0mlplW4LoANq7k3S8gDdfC6+LThGEvsK4FuobcKfDAwt6V4jKPH9RtiE3a2Akfg5UpafZ1OksaPA==
+  /pug-linker/3.0.6:
+    dependencies:
+      pug-error: 1.3.3
+      pug-walk: 1.1.8
+    dev: true
+    resolution:
+      integrity: sha512-bagfuHttfQOpANGy1Y6NJ+0mNb7dD2MswFG2ZKj22s8g0wVsojpRlqveEQHmgXXcfROB2RT6oqbPYr9EN2ZWzg==
+  /pug-load/2.0.12:
+    dependencies:
+      object-assign: 4.1.1
+      pug-walk: 1.1.8
+    dev: true
+    resolution:
+      integrity: sha512-UqpgGpyyXRYgJs/X60sE6SIf8UBsmcHYKNaOccyVLEuT6OPBIMo6xMPhoJnqtB3Q3BbO4Z3Bjz5qDsUWh4rXsg==
+  /pug-parser/4.0.2:
+    dependencies:
+      pug-error: 1.3.3
+      token-stream: 0.0.1
+    dev: false
+    resolution:
+      integrity: sha1-ey4zEbdYIUhnBkeUd6sdNPX4F98=
+  /pug-parser/5.0.1:
+    dependencies:
+      pug-error: 1.3.3
+      token-stream: 0.0.1
+    dev: true
+    resolution:
+      integrity: sha512-nGHqK+w07p5/PsPIyzkTQfzlYfuqoiGjaoqHv1LjOv2ZLXmGX1O+4Vcvps+P4LhxZ3drYSljjq4b+Naid126wA==
+  /pug-plain-loader/1.0.0_pug@2.0.4:
+    dependencies:
+      loader-utils: 1.2.3
+      pug: 2.0.4
+    dev: true
+    peerDependencies:
+      pug: ^2.0.0
+    resolution:
+      integrity: sha512-mDfq/qvJJ0xdug38mZ1ObW0BQTx9kAHnKqotXC+C00XQkKmsWaMe90JUg/kN4lS6MU7tpVsMZ+rmcnBSPfDtHA==
+  /pug-runtime/2.0.5:
+    dev: true
+    resolution:
+      integrity: sha512-P+rXKn9un4fQY77wtpcuFyvFaBww7/91f3jHa154qU26qFAnOe6SW1CbIDcxiG5lLK9HazYrMCCuDvNgDQNptw==
+  /pug-strip-comments/1.0.4:
+    dependencies:
+      pug-error: 1.3.3
+    dev: true
+    resolution:
+      integrity: sha512-i5j/9CS4yFhSxHp5iKPHwigaig/VV9g+FgReLJWWHEHbvKsbqL0oP/K5ubuLco6Wu3Kan5p7u7qk8A4oLLh6vw==
+  /pug-walk-extract-text/1.1.0:
+    dependencies:
+      pug-walk: 1.1.8
+    dev: false
+    resolution:
+      integrity: sha1-2irPO16TQMfSax/aHLiFHUPymmw=
+  /pug-walk/1.1.8:
+    resolution:
+      integrity: sha512-GMu3M5nUL3fju4/egXwZO0XLi6fW/K3T3VTgFQ14GxNi8btlxgT5qZL//JwZFm/2Fa64J/PNS8AZeys3wiMkVA==
+  /pug/2.0.4:
+    dependencies:
+      pug-code-gen: 2.0.2
+      pug-filters: 3.1.1
+      pug-lexer: 4.1.0
+      pug-linker: 3.0.6
+      pug-load: 2.0.12
+      pug-parser: 5.0.1
+      pug-runtime: 2.0.5
+      pug-strip-comments: 1.0.4
+    dev: true
+    resolution:
+      integrity: sha512-XhoaDlvi6NIzL49nu094R2NA6P37ijtgMDuWE+ofekDChvfKnzFal60bhSdiy8y2PBO6fmz3oMEIcfpBVRUdvw==
   /pump/2.0.1:
     dependencies:
       end-of-stream: 1.4.4
@@ -9130,6 +9378,14 @@ packages:
     dev: true
     resolution:
       integrity: sha1-QzdOLiyglosO8VI0YLfXMP8i7rM=
+  /right-align/0.1.3:
+    dependencies:
+      align-text: 0.1.4
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-YTObci/mo1FWiSENJOFMlhSGE+8=
   /rimraf/2.6.3:
     dependencies:
       glob: 7.1.6
@@ -10242,6 +10498,9 @@ packages:
       node: '>=0.6'
     resolution:
       integrity: sha512-yaOH/Pk/VEhBWWTlhI+qXxDFXlejDGcQipMlyxda9nthulaxLZUNcUqFxokp0vcYnvteJln5FNQDRrxj3YcbVw==
+  /token-stream/0.0.1:
+    resolution:
+      integrity: sha1-zu78cXp2xDFvEm0LnbqlXX598Bo=
   /toposort/1.0.7:
     dev: true
     resolution:
@@ -10364,6 +10623,18 @@ packages:
     dev: true
     resolution:
       integrity: sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
+  /uglify-js/2.8.29:
+    dependencies:
+      source-map: 0.5.7
+      yargs: 3.10.0
+    dev: true
+    engines:
+      node: '>=0.8.0'
+    hasBin: true
+    optionalDependencies:
+      uglify-to-browserify: 1.0.2
+    resolution:
+      integrity: sha1-KcVzMUgFe7Th913zW3qcty5qWd0=
   /uglify-js/3.4.10:
     dependencies:
       commander: 2.19.0
@@ -10385,6 +10656,11 @@ packages:
     optional: true
     resolution:
       integrity: sha512-7tINm46/3puUA4hCkKYo4Xdts+JDaVC9ZPRcG8Xw9R4nhO/gZgUM3TENq8IF4Vatk8qCig4MzP/c8G4u2BkVQg==
+  /uglify-to-browserify/1.0.2:
+    dev: true
+    optional: true
+    resolution:
+      integrity: sha1-bgkk1r2mta/jSeOabWMoUKD4grc=
   /unicode-canonical-property-names-ecmascript/1.0.4:
     dev: true
     engines:
@@ -10600,6 +10876,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
+  /void-elements/2.0.1:
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-wGavtYK7HLQSjWDqkjkulNXp2+w=
   /vue-cli-plugin-vuetify/2.0.3:
     dependencies:
       shelljs: 0.8.3
@@ -10963,12 +11245,31 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==
+  /window-size/0.1.0:
+    dev: true
+    engines:
+      node: '>= 0.8.0'
+    resolution:
+      integrity: sha1-VDjNLqk7IC76Ohn+iIeu58lPnJ0=
+  /with/5.1.1:
+    dependencies:
+      acorn: 3.3.0
+      acorn-globals: 3.1.0
+    dev: true
+    resolution:
+      integrity: sha1-+k2qktrzLE6pTtRTyB8EaGtXXf4=
   /word-wrap/1.2.3:
     dev: true
     engines:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==
+  /wordwrap/0.0.2:
+    dev: true
+    engines:
+      node: '>=0.4.0'
+    resolution:
+      integrity: sha1-t5Zpu0LstAn4PVg8rVLKF+qhZD8=
   /wordwrap/0.0.3:
     dev: true
     engines:
@@ -11169,6 +11470,15 @@ packages:
     dev: true
     resolution:
       integrity: sha512-GH/X/hYt+x5hOat4LMnCqMd8r5Cv78heOMIJn1hr7QPPBqfeC6p89Y78+WB9yGDvfpCvgasfmWLzNzEioOUD9Q==
+  /yargs/3.10.0:
+    dependencies:
+      camelcase: 1.2.1
+      cliui: 2.1.0
+      decamelize: 1.2.0
+      window-size: 0.1.0
+    dev: true
+    resolution:
+      integrity: sha1-9+572FfdfB0tOMDnTvvWgdFDH9E=
   /yauzl/2.10.0:
     dependencies:
       buffer-crc32: 0.2.13
@@ -11209,10 +11519,13 @@ specifiers:
   core-js: ^3.4.4
   eslint: ^5.16.0
   eslint-plugin-prettier: ^3.1.1
+  eslint-plugin-pug: ^1.1.1
   eslint-plugin-vue: ^5.0.0
   husky: ^3.1.0
   lint-staged: ^9.5.0
   prettier: ^1.19.1
+  pug: ^2.0.4
+  pug-plain-loader: ^1.0.0
   roboto-fontface: '*'
   sass: ^1.23.7
   sass-loader: ^8.0.0
