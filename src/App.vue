@@ -78,40 +78,69 @@ v-app#app(dark)
             //- </template>
 
 
-            v-footer.pa-2.mt-2.caption.text-center
-                v-container
-                    v-row(no-gutters)
-                        v-col
-                            v-card.pa-2(
-                                outlined 
-                                tile
+            v-footer.pa-0.mt-2.caption.text-center(padless)
+                v-container.pa-0.ma-0(grid-list-md fluid)
+                            //- v-layout.pa-0.ma-0(fill-height)
+                                //- v-flex.pa-0.ma-0(xs12)
+                            v-row.text-xs-center.centv(
+                                no-gutters
+                                justify="center"
+                                align="center"
                                 )
-                                | k of n + 1
-                        v-col
-                            v-card.pa-2(
-                                outlined 
-                                tile
-                                )
-                                v-card-text 
-                                    | last updated: {{ lastModified }} ©
-                                    | {{ new Date().getFullYear() }}
-                        v-col
-                            v-card.pa-2(
-                                outlined 
-                                tile
-                                )
-                                v-card-actions.pa-0.ma-0
-                                    v-spacer
-                                    //- router-link(
-                                        to="/datenschutzerklaerung") Datenschutzerklärung
-                                    v-btn(
-                                        @click.native="scrollToTop"
-                                        to="/datenschutzerklaerung") Datenschutzerklärung
-                                    v-btn(
-                                        @click.native="scrollToTop"
-                                        to="/impressum"
-                                    ) Impressum
-                
+                                    //- v-layout(wrap)
+                                    v-flex(xs12 sm12 md4)
+                                        v-col.pa-0.ma-0
+                                            v-card.text-center(
+                                                outlined 
+                                                tile
+                                                color="transparent"
+                                                elevation=0
+                                                )
+                                                //- (xs12 sm6 md6 lg xl)
+                                                v-card-actions.pa-0.ma-0
+                                                    v-flex.pa-0.ma-0(xs12)
+                                                        v-layout(wrap)
+                                                            v-flex(xs12 sm6 md6)
+                                                                v-row.text-xs-center.centv(
+                                                                    no-gutters
+                                                                    justify="center"
+                                                                    align="center"
+                                                                    ) 
+                                                                    //- v-spacer
+                                                                    //- router-link(
+                                                                        to="/datenschutzerklaerung") Datenschutzerklärung
+                                                                    v-btn(
+                                                                        @click.native="scrollToTop"
+                                                                        to="/datenschutzerklaerung") Datenschutzerklärung
+                                                            v-flex(xs12 sm6 md6)
+                                                                v-row.text-xs-center.centv(
+                                                                    no-gutters
+                                                                    justify="center"
+                                                                    align="center"
+                                                                    )
+                                                                    v-btn(
+                                                                        @click.native="scrollToTop"
+                                                                        to="/impressum"
+                                                                    ) Impressum
+                                    v-flex(xs12 sm12 md4)
+                                        v-col.pa-0.ma-0
+                                            v-card(
+                                                outlined 
+                                                tile
+                                                color="transparent"
+                                                elevation=0
+                                                )
+                                                v-card-text 
+                                                    | last updated: {{ lastModified }} ©
+                                                    | {{ new Date().getFullYear() }}
+                                    v-flex(xs12 sm12 md4)
+                                        v-col.pa-0.ma-0
+                                            v-card(
+                                                outlined 
+                                                tile
+                                                color="transparent"
+                                                elevation=0
+                                                ) ssadasdasdasdasddsadasdasdasdasasdsad
             //- v-footer.pa-2.mt-2.caption.text-center
                 v-container.pa-0.ma-0(fluid)
                     v-layout(row fill-height align-center)
@@ -382,4 +411,13 @@ html
 ::-webkit-scrollbar-track-piece
     /* not handle on */
     background: rgb(1, 1, 1)
+
+.centv
+    // height: 17px
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    vertical-align: middle
+
+.p-m-zero
 </style>
