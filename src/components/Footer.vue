@@ -2,139 +2,61 @@
 //- Footer component
 div 
     //- Footer
-    v-footer(
-        dark
-        padless
-        width="100%" 
-        color="primary"
-    )
-        //- Row 1
-        v-row.lighten-1.white--text(
-            justify="center" 
-            no-gutters
-            width="100%"
-        )
-            //- Website links
-            v-btn.my-0(
-                v-for="site in sites"
-                :key="site.id" 
-                color="white"
-                text 
-                :to="site.to"
-            )
-                | {{ site.name }}
-
-            //- v-btn.my-0(
-            //-     color="white"
-            //-     text 
-            //-     to="/home"
-            //- )
-            //-     | site.name
-
-            v-speed-dial(
-                v-model="languageSelection"
-                direction="top" 
-                transition="slide-y-reverse-transition")
-                template(v-slot:activator)
-                    v-btn(
-                        text)
-                        cf-country-flag(:country="getLocale" size="small") 
-                v-btn(
-                    v-for="locale in getLocales"
-                    :key="locale"
-                    fab
-                    small
-                    color="primary"
-                    @click="$i18n.locale=locale"
+    v-footer.pa-0.mt-2.caption.text-center(padless)
+        v-container.pa-0.ma-0(grid-list-md fluid)
+            v-row.text-xs-center(
+                no-gutters
+                justify="center"
+                align="center"
                 )
-                        cf-country-flag(:country="locale !== 'en' ? locale : 'us'" size="small") 
-        
-        //- Footer card
-        v-card.lighten-1.white--text.text-center(
-            text 
-            tile
-            width="100%"
-        )
-            //- Footer Text
-            v-card-text.pa-1
-                //- Social media buttons
-                v-tooltip(
-                    bottom
-                    v-for="social in socialMedia" 
-                    :key="social.id" 
-                )
-                    template(
-                        v-slot:activator="{ on: tooltip }"
-                    )
-                        v-btn.mx-4.white--text(
-                            :href="social.href"
-                            target="_blank" 
-                            icon=true
-                            outlined=false
-                            rounded
-                            v-on="{ ...tooltip }"
-                        ) 
-                            v-icon.pl-0(
-                                size="24px"
-                            ) {{ social.iconName }}
-                    span {{ social.name }}
-            
-            //- Text footer (optional)
-            //- v-card-text.white--text.pt-0
-                | Text
-
-            v-divider
-
-            //- Year / Copyright
-            v-card-text.pa-0.white--text
-                v-container(fluid)
-                    v-row(no-gutters)
-                        //- Left column
-                        v-col(
-                            cols="12" 
-                            sm="4")
-                            v-card.pa-0(text)
-                                v-card-actions.pa-0.ma-0
+                v-flex(xs12 sm12 md4)
+                    v-col.pa-0.ma-0
+                        v-card.text-center(
+                            outlined 
+                            tile
+                            color="transparent"
+                            elevation=0
+                            )
+                            v-card-actions.pa-0.ma-0
+                                v-container.pa-0.ma-0(grid-list-md fluid)
+                                    v-row.text-xs-center(
+                                        no-gutters
+                                        justify="center"
+                                        align="center") 
+                                            template(
+                                                v-for="site in sites" )
+                                                v-flex(xs12 sm12 md12 lg6)
+                                                    v-col.pa-0.ma-0
+                                                        v-btn.footer-btn(
+                                                            :key="site.id"
+                                                            @click="toTop"
+                                                            :to="site.to"
+                                                            depressed) 
+                                                            | {{ site.name }}
+                v-flex(xs12 sm12 md4)
+                    v-col.pa-0.ma-0
+                        v-card(
+                            outlined 
+                            tile
+                            color="transparent"
+                            elevation=0
+                            )
+                            v-card-text 
+                                | last updated: {{ lastModified }} ©
+                                | {{ new Date().getFullYear() }}
+                v-flex(xs12 sm12 md4)
+                    v-col.pa-0.ma-0
+                        v-card(
+                            outlined 
+                            tile
+                            color="transparent"
+                            elevation=0) 
+                            v-card-actions.pa-0.ma-0
+                                v-flex(text-xs-center align-center)
                                     v-tooltip(
-                                        right
-                                    )
+                                        left)
                                         template(
-                                            v-slot:activator="{ on: tooltip }"
-                                        )
-                                            v-btn.ma-0(
-                                                fab
-                                                x-small
-                                                depressed
-                                                color="transparent" 
-                                                v-on="{ ...tooltip }"
-                                                @click="switchTheme")
-                                                v-icon(v-if="$vuetify.theme.dark") mdi-lightbulb-on
-                                                v-icon(v-if="!$vuetify.theme.dark") mdi-lightbulb-outline
-                                        span(v-if="$vuetify.theme.dark") Switch to light theme
-                                        span(v-else) Switch to dark theme
-
-                        //- Center column
-                        v-col.text-center(
-                            cols="12" 
-                            sm="4"
-                            justify-center)
-                            v-card.pa-0(text)
-                                | {{ new Date().getFullYear() }} — 
-                                strong Y&D Learning
-
-                        //- Right column
-                        v-col(
-                            cols="12" 
-                            sm="4")
-                            v-card.pa-0(text) 
-                                v-card-actions.pa-0.ma-0
-                                    v-spacer
-                                    v-tooltip(
-                                        left
-                                    )
-                                        template(
-                                            v-slot:activator="{ on: tooltip }"
-                                        )
+                                            v-slot:activator="{ on: tooltip }")
                                             v-btn.ma-0(
                                                 fab
                                                 x-small
@@ -149,58 +71,24 @@ div
 <script>
 import { mapState } from "vuex";
 import CountryFlag from "vue-country-flag";
+import axiosInstance from "@/store/api";
 
 export default {
     name: "Footer",
     inject: ["theme"],
     data: () => ({
-        locales: ["en", "de", "jp"],
+        locales: ["en", "de"],
         languageSelection: false,
         sites: [
             {
                 id: 1,
-                name: "Home",
-                to: "/"
+                name: "Datenschutzerklärung",
+                to: "/datenschutzerklaerung"
             },
             {
                 id: 2,
-                name: "Privacy Policy",
-                to: "/privacy_policy"
-            },
-            {
-                id: 3,
-                name: "Legal disclosure",
-                to: "/legal_disclosure"
-            },
-            {
-                id: 4,
-                name: "Cookies",
-                to: "/cookies"
-            },
-            {
-                id: 5,
-                name: "Contact Us",
-                to: "/contact_us"
-            }
-        ],
-        socialMedia: [
-            {
-                id: 1,
-                name: "Y&D Learning",
-                iconName: "mdi-github-circle",
-                href: "https://github.com/ydlearning"
-            },
-            {
-                id: 2,
-                name: "Frontend",
-                iconName: "mdi-github-circle",
-                href: "https://github.com/ydlearning/ydl-v2-front"
-            },
-            {
-                id: 3,
-                name: "Backend",
-                iconName: "mdi-github-circle",
-                href: "https://github.com/ydlearning/ydl-v2-api"
+                name: "Impressum",
+                to: "/impressum"
             }
         ]
     }),
@@ -231,9 +119,24 @@ export default {
             return this.locales.filter(locale => locale !== this.$i18n.locale);
         }
     },
+    mounted() {
+        this.getLastModified(); // TODO: Debug (.head is not a function...)
+    },
     methods: {
         toTop() {
             this.$vuetify.goTo(0);
+        },
+        getLastModified() {
+            console.log(this);
+            var self = this;
+            axiosInstance
+                .head("index.html")
+                .then(function(response) {
+                    // console.log(self);
+                    // console.log(response.headers["last-modified"]);
+                    self.lastModified = response.headers["last-modified"];
+                })
+                .catch(error => console.log(error));
         },
         switchTheme() {
             this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
