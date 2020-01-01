@@ -233,7 +233,7 @@ ul ul li
                 color: #ffffff
 
             &__icon
-                margin-top: 0.3em
+                margin-top: 0.2em
                 margin-right: 1em!important
 
             .text-container
