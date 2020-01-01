@@ -26,148 +26,14 @@ v-app#app(dark)
                     v-btn(text icon color="error" @click="shakeAnimationF")
                         v-icon close
             router-view
-
-            //- Footer
-
-            //- v-footer 
-                div
-                    v-container.grey.lighten-5.mb-6
-                        v-row(:align="align" no-gutters="" style="height: 150px;")
-                            v-col(v-for="n in 3" :key="n")
-                                v-card.pa-2(outlined="" tile="")
-                                    | One of three columns
-
-
-            //- template
-                v-container.grey.lighten-5
-                    v-row(no-gutters="")
-                        template(v-for="n in 4")
-                            v-col(:key="n")
-                                v-card.pa-2(outlined="" tile="")
-                                    | Column
-                            v-responsive(v-if="n === 2" :key="`width-${n}`" width="100%")
-
-            //- v-container.grey.lighten-5
-                v-row(v-for="n in 2" :key="n" :class="n === 1 ? 'mb-6' : ''" no-gutters="")
-                    v-col(v-for="k in n + 1" :key="k")
-                        v-card.pa-2(outlined="" tile="")
-                            | {{ 42 }} of {{ n + 1 }}
-
-                    //- v-container
-                        v-row(no-gutters)
-                            v-col.mb-6
-                                v-card(outlined tile)
-                                    | sdwsdsd
-                            v-col.mb-6
-                                v-card(outlined tile)
-                                    | sdwsdsd
-                            v-col.mb-6
-                                v-card(outlined tile)
-                                    | sdwsdsd
-
-
-            //- <template>
-            //-     <v-container class="grey lighten-5">
-            //-         <v-row v-for="n in 2" :key="n" :class="n === 1 ? 'mb-6' : ''" no-gutters>
-            //-         <v-col v-for="k in n + 1" :key="k">
-            //-             <v-card class="pa-2" outlined tile>{{ k }} of {{ n + 1 }}
-            //-             </v-card>
-            //-         </v-col>
-            //-         </v-row>
-            //-     </v-container>
-            //- </template>
-
-
-            v-footer.pa-0.mt-2.caption.text-center(padless)
-                v-container.pa-0.ma-0(grid-list-md fluid)
-                    v-row.text-xs-center(
-                        no-gutters
-                        justify="center"
-                        align="center"
-                        )
-                        v-flex(xs12 sm12 md4)
-                            v-col.pa-0.ma-0
-                                v-card.text-center(
-                                    outlined 
-                                    tile
-                                    color="transparent"
-                                    elevation=0
-                                    )
-                                    v-card-actions.pa-0.ma-0
-                                        v-container.pa-0.ma-0(grid-list-md fluid)
-                                            v-row.text-xs-center(
-                                                no-gutters
-                                                justify="center"
-                                                align="center") 
-                                                    v-flex(xs12 sm12 md12 lg6)
-                                                        v-col.pa-0.ma-0
-                                                            v-btn.footer-btn(
-                                                                @click.native="scrollToTop"
-                                                                to="/datenschutzerklaerung"
-                                                                depressed) Datenschutzerklärung
-                                                    v-flex(xs12 sm12 md12 lg6)
-                                                        v-col.pa-0.ma-0
-                                                            v-btn.footer-btn(
-                                                                @click.native="scrollToTop"
-                                                                to="/impressum"
-                                                                depressed) Impressum
-                        v-flex(xs12 sm12 md4)
-                            v-col.pa-0.ma-0
-                                v-card(
-                                    outlined 
-                                    tile
-                                    color="transparent"
-                                    elevation=0
-                                    )
-                                    v-card-text 
-                                        | last updated: {{ lastModified }} ©
-                                        | {{ new Date().getFullYear() }}
-                        v-flex(xs12 sm12 md4)
-                            v-col.pa-0.ma-0
-                                v-card(
-                                    outlined 
-                                    tile
-                                    color="transparent"
-                                    elevation=0
-                                    ) ssadasdasdasdasddsadasdasdasdasasdsad
-            //- v-footer.pa-2.mt-2.caption.text-center
-                v-container.pa-0.ma-0(fluid)
-                    v-layout(row fill-height align-center)
-                        v-flex(xs4 text-xs-left)
-                            v-card.text-center(
-                                color="transparent"
-                                elevation=0)
-                                v-card-text 
-                        v-flex(xs4 text-xs-center)
-                            v-card.text-center(
-                                color="transparent"
-                                elevation=0
-                            )
-                                v-card-text 
-                                    | last updated: {{ lastModified }} ©
-                                    | {{ new Date().getFullYear() }}
-                        v-flex(xs4 text-xs-right)
-                            v-card.text-center(
-                                color="transparent"
-                                elevation=0)
-                                v-card-actions.pa-0.ma-0
-                                    v-spacer
-                                    //- router-link(
-                                        to="/datenschutzerklaerung") Datenschutzerklärung
-                                    v-btn(
-                                        @click.native="scrollToTop"
-                                        to="/datenschutzerklaerung") Datenschutzerklärung
-                                    v-btn(
-                                        @click.native="scrollToTop"
-                                        to="/impressum"
-                                    ) Impressum
+            Footer
 </template>
 
 <script>
 // import Router from "vue-router";
 import { setInterval, clearInterval, setTimeout } from "timers";
 import axiosInstance from "@/store/index";
-// import Footer from "@/components/Footer";
+import Footer from "@/components/Footer";
 export default {
     name: "App",
     data() {
@@ -179,9 +45,9 @@ export default {
             lastModified: ""
         };
     },
-    // components: {
-    //     Footer
-    // },
+    components: {
+        Footer
+    },
     watch: {
         $route: function() {
             this.displayTitle();
