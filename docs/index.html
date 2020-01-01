@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Components</title>
+    <title>My Docs</title>
     <link rel="stylesheet" href="css/style-docute.css">
   </head>
   <body>
@@ -12,7 +12,34 @@
     <script>
       new Docute({
         target: '#docute',
-        sidebar: JSON.parse('[{&#34;title&#34;:&#34;BASIC&#34;,&#34;links&#34;:[{&#34;title&#34;:&#34;ImageCard&#34;,&#34;link&#34;:&#34;/./components/ImageCard&#34;},{&#34;title&#34;:&#34;Section&#34;,&#34;link&#34;:&#34;/./components/Section&#34;},{&#34;title&#34;:&#34;ThemeCard&#34;,&#34;link&#34;:&#34;/./components/ThemeCard&#34;}]}]'.replace(/\&\#34\;/g, '"'))
+        sidebar: [
+          {
+            title: 'Components',
+            links: [
+              
+                {
+                  title: 'Footer',
+                  link: '/./components/Footer'
+                },
+              
+                {
+                  title: 'Section',
+                  link: '/./components/Section'
+                },
+              
+                {
+                  title: 'ImageCard',
+                  link: '/./components/ImageCard'
+                },
+              
+                {
+                  title: 'ThemeCard',
+                  link: '/./components/ThemeCard'
+                }
+              
+            ]
+          }
+        ]
       })
     </script>
   </body>
