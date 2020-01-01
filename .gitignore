@@ -72,6 +72,9 @@ build/Release
 node_modules/
 jspm_packages/
 
+/tests/e2e/videos/
+/tests/e2e/screenshots/
+
 # TypeScript v1 declaration files
 typings/
 
