@@ -1,6 +1,0 @@
-# robots.txt zu https://re-krass.github.io/#/
-
-User-agent: *
-Allow: /
-
-Sitemap: https://re-krass.github.io/sitemap.xml
