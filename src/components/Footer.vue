@@ -76,22 +76,25 @@ import axiosInstance from "@/store/api";
 export default {
     name: "Footer",
     inject: ["theme"],
-    data: () => ({
-        locales: ["en", "de"],
-        languageSelection: false,
-        sites: [
-            {
-                id: 1,
-                name: "Datenschutzerklärung",
-                to: "/datenschutzerklaerung"
-            },
-            {
-                id: 2,
-                name: "Impressum",
-                to: "/impressum"
-            }
-        ]
-    }),
+    data() {
+        return {
+            lastModified: "",
+            locales: ["en", "de"],
+            languageSelection: false,
+            sites: [
+                {
+                    id: 1,
+                    name: "Datenschutzerklärung",
+                    to: "/datenschutzerklaerung"
+                },
+                {
+                    id: 2,
+                    name: "Impressum",
+                    to: "/impressum"
+                }
+            ]
+        };
+    },
     props: {
         value: {
             type: String,
